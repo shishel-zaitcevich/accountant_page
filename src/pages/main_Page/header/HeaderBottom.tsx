@@ -6,9 +6,11 @@ export function HeaderBottom() {
         <h1 className="main-title">
           Управляй своим делом в режиме реального времени
         </h1>
-        <button className="button">Написать нам</button>
+        <a href="mailto:abracadabra@mail.ru">
+          <button className="button">Написать нам</button>
+        </a>
       </article>
-      <img src="./assets/main-screen.svg" alt="diagram" />
+      <img src="./assets/main-screen.png" alt="diagram" />
     </div>
   );
 }

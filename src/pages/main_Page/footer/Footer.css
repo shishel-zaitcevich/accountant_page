@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.footer {
+  height: 1125px;
+  background-image: url('../../../../public/assets/background-bottom.png');
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.footer_title {
+  color: #FFFFFF;
+}
+
+.footer_top {
+  width: 750px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tarifs {
+  width: 1600px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.tarif {
+  width: 324px;
+  height: 440px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.dark_tarif {
+  background: #0F1F4B;
+  box-shadow: 0px 18px 50px -15px rgba(25, 42, 89, 0.2);
+  /* opacity: 0.7; */
+}
+
+.price_titles {
+  font-size: 30px;
+  color: #FFFFFF;
+}
+
+.price_size:after {
+  content: ' \20BD';
+}
+
+.button_bottom {
+  width: 200px;
+  height: 50px;
+  border: none;
+  border-radius: 68px;
+  background: linear-gradient(180deg, #EF2A82 0%, #7B61FF 100%);
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+.light_tarif {
+  background: #FFFFFF;
+}
+
+.light_button {
+  background: #EF2A82;
+}
+
+.light_price-title {
+  color: #172755;
+}
