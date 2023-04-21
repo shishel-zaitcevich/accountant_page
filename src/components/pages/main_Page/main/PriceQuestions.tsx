@@ -23,7 +23,11 @@ export function PriceQuestions() {
           </li>
         </ul>
       </article>
-      <img src="./assets/screen-02.png" alt="image" />
+      <img
+        src="./assets/photo-1675453987972-48f9d721281b.png"
+        alt="image"
+        className="main_part-img"
+      />
     </section>
   );
 }

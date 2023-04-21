@@ -10,7 +10,11 @@ export function HeaderBottom() {
           <button className="button">Написать нам</button>
         </a>
       </article>
-      <img src="./assets/main-screen.png" alt="diagram" />
+      <img
+        src="./assets/main-screen-small.svg"
+        alt="diagram"
+        className="header_img"
+      />
     </div>
   );
 }

@@ -13,7 +13,7 @@ export function Advantages() {
       <div className="advantages_listing">
         <div className="advantages_list ">
           <img
-            src="./assets/insurance.svg"
+            src="./assets/icons.svg"
             alt="icon"
             className="advantages_icons"
           />

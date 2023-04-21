@@ -9,7 +9,11 @@ export function Timing() {
           первой встрече.
         </p>
       </article>
-      <img src="./assets/screen-01.png" alt="image" />
+      <img
+        src="./assets/photo-1652466380685-c552233a941a.png"
+        alt="image"
+        className="main_part-img"
+      />
     </section>
   );
 }

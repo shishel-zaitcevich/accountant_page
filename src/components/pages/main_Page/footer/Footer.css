@@ -6,17 +6,13 @@
 
 .footer {
   height: 1125px;
-  background-image: url('../../../../public/assets/background-bottom.png');
+  background-image: url('../../../../../public/assets/background-bottom.png');
   background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
   margin: 0 auto;
-}
-
-.footer_title {
-  color: #FFFFFF;
 }
 
 .footer_top {
@@ -50,7 +46,10 @@
 }
 
 .price_titles {
+  font-family: 'Roboto';
+  font-style: normal;
   font-size: 30px;
+  font-weight: 700;
   color: #FFFFFF;
 }
 
@@ -78,4 +77,18 @@
 
 .light_price-title {
   color: #172755;
+}
+
+.footer_info {
+  width: 1200px;
+  height: 150px;
+  border-top: 1px solid #8794BA;
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer_title {
+  font-size: 40px;
 }

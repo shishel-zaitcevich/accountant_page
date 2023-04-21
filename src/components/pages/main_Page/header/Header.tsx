@@ -12,9 +12,7 @@ export function Header() {
           <Navigation />
           <Icons />
         </div>
-        <div className="header_container-bottom">
-          <HeaderBottom />
-        </div>
+        <HeaderBottom />
       </div>
     </header>
   );
