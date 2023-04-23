@@ -1,6 +1,7 @@
 .header {
   /* height: 815px; */
   display: flex;
+  width: 100vw;
   justify-content: center;
   background-image: url('../../../../../public/assets/fold.svg');
   /* background-size: 100% 100%; */

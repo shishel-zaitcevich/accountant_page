@@ -1,4 +1,4 @@
-import { Icons } from './components/pages/main_Page/header/Icons';
+import { Icons } from '../header/Icons';
 
 export function FooterInfo() {
   return (
