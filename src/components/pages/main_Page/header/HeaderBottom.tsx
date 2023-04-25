@@ -6,7 +6,7 @@ export function HeaderBottom() {
         <h1 className="main-title">
           Управляй своим делом в режиме реального времени
         </h1>
-        <a href="mailto:abracadabra@mail.ru">
+        <a href="mailto:abracadabra@mail.ru" className="button_link">
           <button className="button">Написать нам</button>
         </a>
       </article>

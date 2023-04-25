@@ -8,8 +8,8 @@ export function Navigation() {
       <Link className="link" to="/">
         Главная
       </Link>
-      <Link to="/about" className="link">
-        О нас
+      <Link to="/contacts" className="link">
+        Контакты
       </Link>
       <Link to="/products" className="link">
         Услуги

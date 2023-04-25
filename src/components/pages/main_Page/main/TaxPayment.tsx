@@ -12,7 +12,7 @@ export function TaxPayment() {
         </p>
       </article>
       <img
-        src="./assets/screen-03.png"
+        src="./assets/screen-1.png"
         alt="image"
         className="main_part-img calendar"
       />

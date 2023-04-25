@@ -5,7 +5,7 @@
 }
 
 .footer {
-  height: 1125px;
+  height: 73em;
   background-image: url('../../../../../public/assets/background-bottom.png');
   background-size: cover;
   display: flex;
@@ -16,11 +16,12 @@
 }
 
 .footer_top {
-  width: 750px;
+  width: 42em;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-bottom: 2em;
 }
 
 .tarifs {
