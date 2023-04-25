@@ -25,15 +25,15 @@
 }
 
 .tarifs {
-  width: 1600px;
+  width: 100em;
   display: flex;
   justify-content: space-around;
 }
 
 .tarif {
-  width: 324px;
-  height: 440px;
-  border-radius: 30px;
+  width: 20em;
+  height: 26em;
+  border-radius: 2em;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -43,13 +43,12 @@
 .dark_tarif {
   background: #0F1F4B;
   box-shadow: 0px 18px 50px -15px rgba(25, 42, 89, 0.2);
-  /* opacity: 0.7; */
 }
 
 .price_titles {
   font-family: 'Roboto';
   font-style: normal;
-  font-size: 30px;
+  font-size: 2em;
   font-weight: 700;
   color: #FFFFFF;
 }
@@ -59,10 +58,10 @@
 }
 
 .button_bottom {
-  width: 200px;
-  height: 50px;
+  width: 13em;
+  height: 3em;
   border: none;
-  border-radius: 68px;
+  border-radius: 2em;
   background: linear-gradient(180deg, #EF2A82 0%, #7B61FF 100%);
   color: #FFFFFF;
   cursor: pointer;
@@ -81,15 +80,15 @@
 }
 
 .footer_info {
-  width: 1200px;
-  height: 150px;
+  width: 100em;
+  height: 6em;
   border-top: 1px solid #8794BA;
-  margin-top: 60px;
+  margin-top: 6em;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .footer_title {
-  font-size: 40px;
+  font-size: 2.5em;
 }
