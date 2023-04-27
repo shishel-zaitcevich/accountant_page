@@ -1,5 +1,5 @@
 import React from 'react';
-import { bubble as Menu } from 'react-burger-menu';
+import { pushRotate as Menu } from 'react-burger-menu';
 import './burgerMenu.css';
 import { Link } from 'react-router-dom';
 

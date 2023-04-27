@@ -15,7 +15,6 @@
   align-items: center;
   margin: 0 auto;
   /* max-width: 100%; */
-
 }
 
 .footer_top {
@@ -98,4 +97,22 @@
 
 .footer_title {
   font-size: 2.5em;
+}
+
+@media (min-width: 992px) and (max-width: 1299px) {
+  /* .footer {
+    min-height: 50em;
+  } */
+
+  .footer_info {
+    min-width: 50em;
+  }
+
+  .footer_title {
+    font-size: 2em;
+  }
+
+  .footer_top {
+    max-width: 48em;
+  }
 }

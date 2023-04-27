@@ -128,3 +128,34 @@
 .calendar {
   max-width: 27em;
 }
+
+@media (min-width: 992px) and (max-width: 1299px) {
+  .section_other {
+    max-width: 60em;
+    align-items: flex-start;
+    padding-top: 2em;
+  }
+
+  .section {
+    justify-content: space-around;
+  }
+
+  .advantages_listing {
+    min-height: 24em;
+  }
+
+  .advantages_list {
+    min-height: 18em;
+  }
+
+  .section_title {
+    font-size: 1.8em;
+    width: 11em;
+  }
+
+  .main_part-img {
+    width: 23em;
+    ;
+  }
+
+}
