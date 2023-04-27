@@ -1,8 +1,8 @@
 export function PriceQuestions() {
   return (
     <section className="section section_other section-reverse">
-      <article className="text-part">
-        <h2 className="section_title">
+      <article className="text-part text_part-reverse">
+        <h2 className="section_title section_title-reverse">
           Из чего складывается цена обслуживания?
         </h2>
         <ul className="list">

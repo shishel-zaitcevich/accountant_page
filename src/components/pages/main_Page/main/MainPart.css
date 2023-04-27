@@ -9,12 +9,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  max-width: 100%;
 }
 
 .section {
-  width: 100em;
+  max-width: 100em;
   margin: 0 auto;
+  padding: 2em;
   padding-top: 5em;
   display: flex;
   flex-direction: column;
@@ -46,6 +47,7 @@
   text-align: center;
   margin-top: 2em;
   margin-bottom: 2em;
+  text-decoration: none;
 }
 
 .advantages_listing {
@@ -57,7 +59,7 @@
 }
 
 .advantages_list {
-  width: 26em;
+  max-width: 26em;
   height: 12em;
   display: flex;
   flex-direction: column;
@@ -69,6 +71,7 @@
   font-weight: 700;
   font-size: 1.4em;
   color: #172755;
+  text-align: center;
 }
 
 .listing-text {
@@ -78,15 +81,25 @@
 }
 
 .section_other {
-  width: 95em;
+  min-width: 30em;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   padding-top: 7em;
 }
 
 .text-part {
-  width: 50em;
+  max-width: 50em;
+}
+
+.text_part-reverse {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section_title-reverse {
+  text-align: center;
 }
 
 .section_text-other {
@@ -108,10 +121,10 @@
 }
 
 .main_part-img {
-  width: 30em;
+  max-width: 30em;
   border-radius: 2em;
 }
 
 .calendar {
-  width: 27em;
+  max-width: 27em;
 }

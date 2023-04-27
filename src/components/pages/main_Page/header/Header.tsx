@@ -7,13 +7,11 @@ export function Header() {
   return (
     <header className="header">
       <Icons />
-      <div className="container">
-        <div className="header_container-top">
-          <img src="./assets/image.svg" alt="logo" className="logo" />
-          <Navigation />
-        </div>
-        <HeaderBottom />
+      <div className="header_container-top">
+        <img src="./assets/image.svg" alt="logo" className="logo" />
+        <Navigation />
       </div>
+      <HeaderBottom />
     </header>
   );
 }

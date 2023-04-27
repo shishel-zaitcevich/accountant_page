@@ -1,5 +1,5 @@
 import './Footer.css';
-import { FooterInfo } from './FooterBottom';
+import { FooterInfo } from './FooterInfo';
 import { FooterTop } from './FooterTop';
 
 export function Footer() {

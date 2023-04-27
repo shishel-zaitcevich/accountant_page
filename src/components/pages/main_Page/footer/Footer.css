@@ -5,7 +5,8 @@
 }
 
 .footer {
-  height: 73em;
+  min-width: 100%;
+  min-height: 73em;
   background-image: url('../../../../../public/assets/background-bottom.png');
   background-size: cover;
   display: flex;
@@ -13,10 +14,13 @@
   justify-content: flex-end;
   align-items: center;
   margin: 0 auto;
+  /* max-width: 100%; */
+
 }
 
 .footer_top {
-  width: 42em;
+  max-width: 72em;
+  min-width: 20em;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -25,19 +29,20 @@
 }
 
 .tarifs {
-  width: 100em;
+  min-width: 56em;
   display: flex;
   justify-content: space-around;
 }
 
 .tarif {
-  width: 20em;
-  height: 26em;
+  width: 16em;
+  min-height: 16em;
   border-radius: 2em;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
+  text-align: center;
 }
 
 .dark_tarif {
@@ -65,6 +70,7 @@
   background: linear-gradient(180deg, #EF2A82 0%, #7B61FF 100%);
   color: #FFFFFF;
   cursor: pointer;
+  margin-bottom: 1.5em;
 }
 
 .light_tarif {
@@ -80,12 +86,13 @@
 }
 
 .footer_info {
-  width: 100em;
+  max-width: 100%;
+  min-width: 72em;
   height: 6em;
   border-top: 1px solid #8794BA;
   margin-top: 6em;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 

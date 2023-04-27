@@ -6,9 +6,9 @@ export function Advantages() {
       <h2 className="section_title">Наши преимущества</h2>
       <p className="section_text advantages_text text">
         Удаленное бухгалтерское обслуживание - удобное решение для руководителей
-        ООО и индивидуальных <br /> предпринимателей. Предлагаем надежную
-        бухгалтерскую поддержку, позволяющую нашим клиентам экономить время и
-        ресурсы для направления их на развитие бизнеса.
+        ООО и индивидуальных предпринимателей. Предлагаем надежную бухгалтерскую
+        поддержку, позволяющую нашим клиентам экономить время и ресурсы для
+        направления их на развитие бизнеса.
       </p>
       <div className="advantages_listing">
         <div className="advantages_list ">
@@ -25,7 +25,7 @@ export function Advantages() {
 
         <div className="advantages_list">
           <img
-            src="./assets/icon.svg"
+            src="./assets/computer.svg"
             alt="icon"
             className="advantages_icons"
           />
