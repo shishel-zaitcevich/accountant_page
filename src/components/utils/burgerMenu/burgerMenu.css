@@ -81,3 +81,9 @@ Note: Beware of modifying this element as it can break the animations - you shou
   top: 0;
   right: 0;
 }
+
+@media (min-width: 320px) and (max-width: 768px) {
+  .bm-burger-button {
+    right: 30px;
+  }
+}

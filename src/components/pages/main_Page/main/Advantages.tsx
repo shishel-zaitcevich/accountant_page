@@ -17,10 +17,13 @@ export function Advantages() {
             alt="icon"
             className="advantages_icons"
           />
-          <h4 className="advantages_title text">Комплексное обслуживание</h4>
-          <p className="listing-text text">
-            Наладим бухгалтерский, налоговый, финансовый и управленческий учет
-          </p>
+          <div className="advantages_description">
+            <h4 className="advantages_title text">Комплексное обслуживание</h4>
+            <p className="listing-text text">
+              Наладим бухгалтерский, налоговый, финансовый и управленческий
+              учет, поможем оптимизировать затраты
+            </p>
+          </div>
         </div>
 
         <div className="advantages_list">
@@ -29,13 +32,15 @@ export function Advantages() {
             alt="icon"
             className="advantages_icons"
           />
-          <h4 className="advantages_title text">
-            Высокий уровень проффесионализма
-          </h4>
-          <p className="listing-text text">
-            Многолетний опыт наших сотрудников позволяет гарантировать качество
-            обслуживания по договору
-          </p>
+          <div className="advantages_description">
+            <h4 className="advantages_title text">
+              Высокий уровень проффесионализма
+            </h4>
+            <p className="listing-text text">
+              Многолетний опыт наших сотрудников позволяет гарантировать
+              качество обслуживания по договору
+            </p>
+          </div>
         </div>
 
         <div className="advantages_list">
@@ -44,11 +49,13 @@ export function Advantages() {
             alt="icon"
             className="advantages_icons"
           />
-          <h4 className="advantages_title text">Гибкая ценовая политика</h4>
-          <p className="listing-text text">
-            Стоимость услуг определяется индивидуально и зависит от объема и
-            сложности задач
-          </p>
+          <div className="advantages_description">
+            <h4 className="advantages_title text">Гибкая ценовая политика</h4>
+            <p className="listing-text text">
+              Стоимость услуг определяется индивидуально и зависит от объема и
+              сложности задач
+            </p>
+          </div>
         </div>
       </div>
     </section>

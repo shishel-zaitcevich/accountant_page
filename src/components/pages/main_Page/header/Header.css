@@ -156,3 +156,52 @@
     max-height: 20em;
   }
 }
+
+@media (min-width: 320px) and (max-width: 768px) {
+  .header {
+    max-height: 100em;
+    /* max-width: 20em; */
+    background-image: url('../../../../../public/assets/background_top_mobile.svg');
+  }
+
+  .header_container-top {
+    /* max-width: 100%;
+    min-width: 20em; */
+    justify-content: flex-start;
+    padding-left: 2em;
+    ;
+  }
+
+  .icons {
+    display: none;
+  }
+
+  .header_container-bottom {
+    min-width: 20em;
+    max-width: 47em;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0;
+  }
+
+  .header_img {
+    max-width: 85%;
+    padding-top: 5em;
+  }
+
+
+  .main-title {
+    text-align: center;
+  }
+
+  .article {
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+
+}
