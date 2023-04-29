@@ -37,10 +37,10 @@ export function Navigation() {
   } else {
     return (
       <SideBar
-        // isOpen={false}
+        isOpen={false}
         right={true}
-        // pageWrapId={'page-wrap'}
-        // outerContainerId={'App'}
+        pageWrapId={'page-wrap'}
+        outerContainerId={'App'}
       />
     );
   }

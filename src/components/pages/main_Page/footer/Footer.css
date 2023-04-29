@@ -28,7 +28,7 @@
 }
 
 .tarifs {
-  min-width: 56em;
+  min-width: 50%;
   display: flex;
   justify-content: space-around;
 }
@@ -120,8 +120,7 @@
   }
 
   .footer {
-    overflow-x: hidden;
-    max-height: 85em;
+    max-height: 69em;
     /* background-image: url('../../../../../public/assets/background_bottom_mobile.svg');
     background-size: contain; */
     background-position: 50em 0;
@@ -140,6 +139,28 @@
   }
 
   .footer_title {
-    margin-left: 0.5em;
+    /* margin-left: 0.5em; */
+    font-size: 2em;
+  }
+
+  .section_text.card_mobile {
+    text-align: center;
+  }
+}
+
+@media (min-width: 586px) and (max-width: 768px) {
+  .footer {
+    min-height: 64em;
+  }
+
+}
+
+@media (min-width: 769px) and (max-width: 991px) {
+  .footer_info {
+    min-width: 100%;
+  }
+
+  .footer {
+    min-height: 75em;
   }
 }

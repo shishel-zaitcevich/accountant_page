@@ -11,11 +11,7 @@ export function TaxPayment() {
           оптимизации налогов, подготовим платежные поручения на их перечисление
         </p>
       </article>
-      <img
-        src="./assets/screen-1.png"
-        alt="image"
-        className="main_part-img calendar"
-      />
+      <img src="./assets/stickers.jpg" alt="image" className="main_part-img" />
     </section>
   );
 }

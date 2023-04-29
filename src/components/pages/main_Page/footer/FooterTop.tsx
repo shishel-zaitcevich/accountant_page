@@ -60,11 +60,13 @@ export function FooterTop() {
         <div className="tarifs">
           <div className="tarif light_tarif">
             <h3 className="price_titles light_price-title">Премиальный</h3>
-            <p className="section_text text ">численность свыше 5 человек</p>
+            <p className="section_text text card_mobile ">
+              численность свыше 5 человек
+            </p>
             <span className="price_size price_titles light_price-title">
               7000
             </span>
-            <p className="section_text text">в месяц</p>
+            <p className="section_text text card_mobile">в месяц</p>
             <a href="">
               <button className="button_bottom light_button">Заказать</button>
             </a>
