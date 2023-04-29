@@ -138,4 +138,8 @@
   .footer_info .section_text {
     display: none;
   }
+
+  .footer_title {
+    margin-left: 0.5em;
+  }
 }

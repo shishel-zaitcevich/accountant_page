@@ -1,11 +1,15 @@
 import React from 'react';
-import { pushRotate as Menu } from 'react-burger-menu';
+import { slide as Menu, Props } from 'react-burger-menu';
 import './burgerMenu.css';
 import { Link } from 'react-router-dom';
 
-export function BurgerMenu() {
+export function SideBar(
+  props: JSX.IntrinsicAttributes &
+    JSX.IntrinsicClassAttributes<Menu> &
+    Readonly<Props>
+) {
   return (
-    <Menu>
+    <Menu {...props}>
       <Link className="menu-item" to="/">
         Главная
       </Link>

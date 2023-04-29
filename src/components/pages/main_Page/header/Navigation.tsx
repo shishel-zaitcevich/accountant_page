@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css';
-import { BurgerMenu } from '../../../utils/burgerMenu/burgerMenu';
+// import { BurgerMenu } from '../../../utils/burgerMenu/burgerMenu';
+import { SideBar } from '../../../utils/burgerMenu/sidebar';
 
 export function Navigation() {
   if (window.innerWidth >= 1300) {
@@ -34,6 +35,13 @@ export function Navigation() {
       </nav>
     );
   } else {
-    return <BurgerMenu />;
+    return (
+      <SideBar
+        // isOpen={false}
+        right={true}
+        // pageWrapId={'page-wrap'}
+        // outerContainerId={'App'}
+      />
+    );
   }
 }

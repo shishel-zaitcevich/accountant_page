@@ -159,14 +159,14 @@
 
 @media (min-width: 320px) and (max-width: 768px) {
   .header {
-    max-height: 100em;
-    /* max-width: 20em; */
+    height: 60em;
+    min-width: 322px;
     background-image: url('../../../../../public/assets/background_top_mobile.svg');
   }
 
   .header_container-top {
-    /* max-width: 100%;
-    min-width: 20em; */
+    width: 100%;
+    /* min-width: 20em; */
     justify-content: flex-start;
     padding-left: 2em;
     ;
@@ -177,8 +177,8 @@
   }
 
   .header_container-bottom {
-    min-width: 20em;
-    max-width: 47em;
+    width: 100%;
+    /* max-width: 47em; */
     flex-direction: column-reverse;
     justify-content: flex-start;
     align-items: center;
@@ -187,7 +187,7 @@
 
   .header_img {
     max-width: 85%;
-    padding-top: 5em;
+    padding-top: 10%;
   }
 
 
@@ -196,6 +196,7 @@
   }
 
   .article {
+    height: 100%;
     padding-left: 0;
     display: flex;
     flex-direction: column;
