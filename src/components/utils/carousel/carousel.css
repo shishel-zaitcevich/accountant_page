@@ -1,0 +1,13 @@
+.slick-arrow:before {
+  color: rgb(255, 255, 255);
+}
+
+.slick-slider {
+  width: 60%;
+}
+
+@media (min-width: 320px) and (max-width: 1299px) {
+  .slick-slider {
+    width: 70%;
+  }
+}

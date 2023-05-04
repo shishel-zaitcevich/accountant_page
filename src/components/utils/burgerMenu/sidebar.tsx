@@ -34,6 +34,9 @@ export function SideBar(
       <Link to="tel:+79516585914" className="menu-item">
         +7 951 658 59 14
       </Link>
+      <a href="tg://resolve?domain=<USERNAME>" className="menu-item">
+        abracadabra@mail.ru
+      </a>
       <div className="burger_icons">
         <a href="https://wa.me/79991112233">
           <img src="./assets/Group.svg" alt="whatsapp" />
