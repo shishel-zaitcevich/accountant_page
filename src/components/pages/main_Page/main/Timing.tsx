@@ -3,7 +3,7 @@ export function Timing() {
     <section className="section section_other">
       <article className="text-part">
         <h2 className="section_title">Управляй своим временем грамотно</h2>
-        <p className="section_text text section_text-other">
+        <p className="section_text">
           Стабильность и непрерывность ведения учета - залог успешного ведения
           бизнеса. Согласуем все необходимые условия Вашего обслуживания на
           первой встрече.

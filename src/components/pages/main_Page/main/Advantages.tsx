@@ -1,10 +1,10 @@
-import './MainPart.css';
+import './Advantages.css';
 
 export function Advantages() {
   return (
     <section className="section">
       <h2 className="section_title">Наши преимущества</h2>
-      <p className="section_text advantages_text text">
+      <p className="section_text">
         Удаленное бухгалтерское обслуживание - удобное решение для руководителей
         ООО и индивидуальных предпринимателей. Предлагаем надежную бухгалтерскую
         поддержку, позволяющую нашим клиентам экономить время и ресурсы для
@@ -19,7 +19,7 @@ export function Advantages() {
           />
           <div className="advantages_description">
             <h4 className="advantages_title text">Комплексное обслуживание</h4>
-            <p className="listing-text text">
+            <p className="section_text">
               Наладим бухгалтерский, налоговый, финансовый и управленческий
               учет, поможем оптимизировать затраты
             </p>
@@ -36,7 +36,7 @@ export function Advantages() {
             <h4 className="advantages_title text">
               Высокий уровень проффесионализма
             </h4>
-            <p className="listing-text text">
+            <p className="section_text">
               Многолетний опыт наших сотрудников позволяет гарантировать
               качество обслуживания по договору
             </p>
@@ -50,8 +50,8 @@ export function Advantages() {
             className="advantages_icons"
           />
           <div className="advantages_description">
-            <h4 className="advantages_title text">Гибкая ценовая политика</h4>
-            <p className="listing-text text">
+            <h4 className="advantages_title">Гибкая ценовая политика</h4>
+            <p className="section_text">
               Стоимость услуг определяется индивидуально и зависит от объема и
               сложности задач
             </p>

@@ -6,7 +6,7 @@
 
 .footer {
   min-width: 100%;
-  min-height: 73em;
+  min-height: 66em;
   background-image: url('../../../../../public/assets/background-bottom.png');
   background-size: cover;
   display: flex;
@@ -35,7 +35,7 @@
 
 .tarif {
   width: 16em;
-  min-height: 16em;
+  min-height: 340px;
   border-radius: 2em;
   display: flex;
   flex-direction: column;
@@ -47,6 +47,10 @@
 .dark_tarif {
   background: #0F1F4B;
   box-shadow: 0px 18px 50px -15px rgba(25, 42, 89, 0.2);
+}
+
+.light_tarif {
+  background: #fff;
 }
 
 .price_titles {
@@ -72,10 +76,6 @@
   margin-bottom: 1.5em;
 }
 
-.light_tarif {
-  background: #FFFFFF;
-}
-
 .light_button {
   background: #EF2A82;
 }
@@ -97,7 +97,44 @@
 
 .footer_title {
   font-size: 2.5em;
+  padding-bottom: 40px;
 }
+
+.even_tarif .dark_tarif {
+  background: #0F1F4B;
+}
+
+.odd_tarif .light_tarif {
+  background: #fff;
+}
+
+.even_tarif .price_titles,
+.even_tarif .section_text.text,
+.even_tarif .price_size.price_titles {
+  color: #fff;
+}
+
+.odd_tarif .price_titles,
+.odd_tarif .section_text.text,
+.odd_tarif .price_size.price_titles {
+  color: #172755;
+}
+
+.even_tarif .button_bottom {
+  background: linear-gradient(180deg, #EF2A82 0%, #7B61FF 100%);
+  color: #172755;
+}
+
+.odd_tarif .button_bottom {
+  background: #EF2A82;
+  color: #fff;
+}
+
+.footer .section_text {
+  color: #fff;
+  padding-bottom: 40px;
+}
+
 
 @media (min-width: 992px) and (max-width: 1299px) {
   .footer_info {
@@ -144,6 +181,11 @@
   }
 
   .section_text.card_mobile {
+    text-align: center;
+  }
+
+  .section_text {
+    margin: 0 20px;
     text-align: center;
   }
 }

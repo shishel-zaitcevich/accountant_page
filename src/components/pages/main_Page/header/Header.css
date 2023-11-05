@@ -2,6 +2,10 @@
   outline: solid red;
 } */
 
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
 .header {
   display: flex;
   min-height: 44em;

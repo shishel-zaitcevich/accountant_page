@@ -1,0 +1,43 @@
+.section_other {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-part {
+  text-align: center;
+  padding: 20px;
+}
+
+.section_title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.section_text {
+  font-size: 16px;
+}
+
+.main_part-img {
+  max-width: 100%;
+  /* Чтобы изображение не выходило за пределы родительского контейнера */
+  margin-left: 20px;
+  /* Добавим немного отступа между текстом и изображением */
+}
+
+/* Адаптивные стили */
+@media screen and (max-width: 768px) {
+  .section_other {
+    flex-direction: column;
+    /* Переключаемся на вертикальное расположение при ширине экрана менее 768px */
+    text-align: center;
+    /* Центрируем текст по центру при вертикальном расположении */
+  }
+
+  .main_part-img {
+    margin-left: 0;
+    /* Убираем отступ для изображения при вертикальном расположении */
+    margin-top: 20px;
+    /* Добавим отступ сверху для изображения при вертикальном расположении */
+  }
+}

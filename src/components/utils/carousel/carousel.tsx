@@ -43,13 +43,14 @@ export function SimpleCarousel() {
 
   return (
     <Slider {...settings}>
-      {data.map((data) => (
+      {data.map((data, index) => (
         <Card
           key={data.title}
           title={data.title}
           quantity={data.quantity}
           price={data.price}
           timeline={data.timeline}
+          index={index}
         />
       ))}
     </Slider>
