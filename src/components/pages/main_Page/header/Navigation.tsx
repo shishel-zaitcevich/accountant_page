@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './Header.css';
 // import { BurgerMenu } from '../../../utils/burgerMenu/burgerMenu';
 import { SideBar } from '../../../utils/burgerMenu/sidebar';
@@ -8,30 +8,54 @@ export function Navigation() {
   if (window.innerWidth >= 1300) {
     return (
       <nav className="nav">
-        <Link className="link" to="/">
+        <NavLink
+          className={({ isActive }) => (isActive ? 'active_link' : 'link')}
+          to="/"
+        >
           Главная
-        </Link>
-        <Link to="/contacts" className="link">
+        </NavLink>
+        <NavLink
+          to="/contacts"
+          className={({ isActive }) => (isActive ? 'active_link' : 'link')}
+        >
           Контакты
-        </Link>
-        <Link to="/products" className="link">
+        </NavLink>
+        <NavLink
+          to="/products"
+          className={({ isActive }) => (isActive ? 'active_link' : 'link')}
+        >
           Услуги
-        </Link>
-        <Link to="/rates" className="link">
+        </NavLink>
+        <NavLink
+          to="/rates"
+          className={({ isActive }) => (isActive ? 'active_link' : 'link')}
+        >
           Тарифы
-        </Link>
-        <Link to="/calculation" className="link">
+        </NavLink>
+        <NavLink
+          to="/calculation"
+          className={({ isActive }) => (isActive ? 'active_link' : 'link')}
+        >
           Калькулятор
-        </Link>
-        <Link to="/reviews" className="link">
+        </NavLink>
+        <NavLink
+          to="/reviews"
+          className={({ isActive }) => (isActive ? 'active_link' : 'link')}
+        >
           Отзывы
-        </Link>
-        <Link to="/low" className="link">
+        </NavLink>
+        <NavLink
+          to="https://www.kontur-extern.ru/info/37534-top_12_izmeneniy_dlya_buhgaltera"
+          className={({ isActive }) => (isActive ? 'active_link' : 'link')}
+        >
           Новое в законодательстве
-        </Link>
-        <Link to="tel:+79516585914" className="link">
+        </NavLink>
+        <NavLink
+          to="tel:+79516585914"
+          className={({ isActive }) => (isActive ? 'active_link' : 'link')}
+        >
           +7 951 658 59 14
-        </Link>
+        </NavLink>
       </nav>
     );
   } else {

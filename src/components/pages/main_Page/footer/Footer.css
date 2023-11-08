@@ -14,7 +14,6 @@
   justify-content: flex-end;
   align-items: center;
   margin: 0 auto;
-  /* max-width: 100%; */
 }
 
 .footer_top {
@@ -28,7 +27,7 @@
 }
 
 .tarifs {
-  min-width: 50%;
+  min-width: 55%;
   display: flex;
   justify-content: space-around;
 }
@@ -40,8 +39,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: center;
   text-align: center;
+  padding-top: 20px;
 }
 
 .dark_tarif {
@@ -59,6 +58,7 @@
   font-size: 2em;
   font-weight: 700;
   color: #FFFFFF;
+  padding-bottom: 20px;
 }
 
 .price_size:after {
@@ -73,7 +73,7 @@
   background: linear-gradient(180deg, #EF2A82 0%, #7B61FF 100%);
   color: #FFFFFF;
   cursor: pointer;
-  margin-bottom: 1.5em;
+  margin-bottom: 20px;
 }
 
 .light_button {
@@ -93,6 +93,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  color: #fff;
 }
 
 .footer_title {
@@ -132,7 +133,11 @@
 
 .footer .section_text {
   color: #fff;
-  padding-bottom: 40px;
+}
+
+
+.footer_info .logo {
+  margin: 0;
 }
 
 
@@ -150,26 +155,26 @@
   }
 }
 
-@media (min-width: 320px) and (max-width: 768px) {
+@media (min-width: 320px) and (max-width: 586px) {
   .footer_info {
     min-width: 20em;
     gap: 2em;
   }
 
   .footer {
-    max-height: 69em;
+    max-height: 72em;
     /* background-image: url('../../../../../public/assets/background_bottom_mobile.svg');
     background-size: contain; */
-    background-position: 50em 0;
+    background-position: 28em 0;
   }
 
   .footer_top {
     min-height: 100%;
   }
 
-  .section_text-mobile {
+  /* .section_text-mobile {
     max-width: 93%;
-  }
+  } */
 
   .footer_info .section_text {
     display: none;
@@ -178,6 +183,7 @@
   .footer_title {
     /* margin-left: 0.5em; */
     font-size: 2em;
+    margin: 0;
   }
 
   .section_text.card_mobile {
@@ -188,13 +194,31 @@
     margin: 0 20px;
     text-align: center;
   }
+
+  .tarif .section_text {
+    text-align: center;
+  }
 }
 
-@media (min-width: 586px) and (max-width: 768px) {
+@media (min-width: 440px) and (max-width: 586px) {
+  .footer {
+    background-position: 56em 0;
+  }
+}
+
+@media (min-width: 587px) and (max-width: 768px) {
   .footer {
     min-height: 64em;
+    background-position: 56em 0;
   }
 
+  .footer_info {
+    min-width: 100%;
+  }
+
+  .footer_info .section_text {
+    display: none;
+  }
 }
 
 @media (min-width: 769px) and (max-width: 991px) {
@@ -203,6 +227,7 @@
   }
 
   .footer {
-    min-height: 75em;
+    min-height: 58em;
+    background-position: 64em 0;
   }
 }

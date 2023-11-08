@@ -20,7 +20,7 @@ export const data: CardsTypes[] = [
     timeline: 'в месяц',
   },
   {
-    title: 'Индивидуальный',
+    title: 'Персональный',
     quantity: 'численность 1 человек',
     price: 8000,
     timeline: 'в месяц',

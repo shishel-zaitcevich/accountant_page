@@ -1,8 +1,8 @@
-import './Footer.css';
 import { FooterInfo } from './FooterInfo';
 import { FooterTop } from './FooterTop';
+import './Footer.css';
 
-export function Footer() {
+export function FooterMain() {
   return (
     <footer className="footer">
       <FooterTop />

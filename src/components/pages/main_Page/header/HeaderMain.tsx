@@ -3,7 +3,7 @@ import { Icons } from './Icons';
 import { Navigation } from './Navigation';
 import './Header.css';
 
-export function Header() {
+export function HeaderMain() {
   return (
     <header className="header">
       <Icons />

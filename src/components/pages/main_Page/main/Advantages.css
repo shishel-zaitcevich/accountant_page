@@ -1,3 +1,7 @@
+.main {
+  overflow-x: hidden;
+}
+
 .section {
   text-align: center;
   padding: 20px;
@@ -163,6 +167,7 @@
   .section {
     padding: 0;
     padding-top: 20px;
+    padding-bottom: 20px;
     margin: 0 20px;
   }
 
@@ -181,6 +186,7 @@
   .advantages_title {
     font-size: 20px;
     margin-bottom: 8px;
+    margin-left: 20px;
     text-align: left;
   }
 
@@ -202,6 +208,7 @@
     gap: 2em;
     height: 100%;
     width: 70%;
+    margin-left: 20px;
   }
 
   .advantages_description {

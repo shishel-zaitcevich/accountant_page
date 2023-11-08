@@ -1,0 +1,50 @@
+// .table {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: flex-start;
+//   border-collapse: collapse;
+//   margin: 20px;
+// }
+
+// .row {
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: flex-start;
+//   width: 100%;
+//   border-bottom: 1px solid #ddd;
+//   padding: 10px;
+// }
+
+// .cell {
+//   flex: 1;
+//   padding: 8px;
+// }
+
+// .cell:first-child {
+//   flex: 2; // Увеличиваем ширину первой ячейки
+// }
+
+// /* Пример стилей для заголовка, если нужен */
+// .table_header {
+//   font-weight: bold;
+//   background-color: #f2f2f2;
+// }
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.row {
+  border-bottom: 1px solid #ddd;
+}
+
+.cell {
+  padding: 8px;
+  text-align: left;
+}
+
+.table_header {
+  font-weight: bold;
+  background-color: #f2f2f2;
+}

@@ -1,0 +1,105 @@
+@mixin center {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.contacts {
+  @include center;
+  width: 100%;
+  background-color: #ffffff;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 40px;
+}
+
+// .header_other-pages {
+//   height: 200px;
+//   background-color: #172856;
+// }
+
+// .header_other-pages {
+//   min-height: 8em;
+//   margin-bottom: 20px;
+//   // position: fixed;
+// }
+
+.main_contacts {
+  @include center;
+  max-width: 900px;
+  align-items: center;
+  margin-top: 40px;
+  gap: 40px;
+}
+
+.contacts-description {
+  margin-bottom: 20px;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0; /* Начальная непрозрачность */
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1; /* Конечная непрозрачность */
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0; /* Начальная непрозрачность */
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1; /* Конечная непрозрачность */
+  }
+}
+
+.buh {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+@mixin image {
+  width: 355px;
+  border: 3px solid #ef2a82;
+  border-radius: 20px;
+}
+
+.buh-img1,
+.buh-description1,
+.buh-img2,
+.buh-description2 {
+  opacity: 0; /* Начальная непрозрачность */
+}
+
+.buh-img1 {
+  @include image;
+  animation: slideInRight 1s ease-out forwards; /* forwards сохраняет состояние анимации после завершения */
+}
+
+@mixin buhdescription {
+  max-width: 600px;
+  margin-left: 20px;
+  margin-right: 20px;
+  color: black;
+}
+
+.buh-description1 {
+  @include buhdescription;
+  animation: slideInRight 1s ease-out 0.5s forwards; /* forwards сохраняет состояние анимации после завершения */
+}
+
+.buh-img2 {
+  @include image;
+  animation: slideInLeft 1s ease-out forwards; /* forwards сохраняет состояние анимации после завершения */
+}
+
+.buh-description2 {
+  @include buhdescription;
+  animation: slideInLeft 1s ease-out 0.5s forwards; /* forwards сохраняет состояние анимации после завершения */
+}

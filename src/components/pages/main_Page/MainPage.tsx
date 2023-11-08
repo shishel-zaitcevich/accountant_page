@@ -1,13 +1,13 @@
-import { Footer } from './footer/Footer';
-import { Header } from './header/Header';
+import { FooterMain } from './footer/FooterMain';
+import { HeaderMain } from './header/HeaderMain';
 import { MainPart } from './main/MainPart';
 
 export function Main() {
   return (
     <>
-      <Header />
+      <HeaderMain />
       <MainPart />
-      <Footer />
+      <FooterMain />
     </>
   );
 }
