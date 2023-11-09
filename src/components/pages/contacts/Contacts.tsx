@@ -29,12 +29,12 @@ export function Contacts({ data }: { data: Person[] }) {
             </div>
             <img src="./assets/buh2.png" alt="" className="buh-img2" />
           </div>
-          <div className="buh">
+          {/* <div className="buh">
             <img src="./assets/buh3.png" alt="" className="buh-img1" />
             <div className="buh-description1 section_text">
               <AccountantsData data={[dataPeople[0]]} />
             </div>
-          </div>
+          </div> */}
         </main>
         <Footer />
       </div>

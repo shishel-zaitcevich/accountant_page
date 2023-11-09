@@ -6,9 +6,9 @@ import '../feedback/feedback.scss';
 export function FeedbackPage() {
   return (
     <>
-      <div className="feedback">
+      <div className="container">
         <Header />
-        <FeedbackForm />;
+        <FeedbackForm />
         <Footer />
       </div>
     </>

@@ -9,7 +9,7 @@
 .header {
   display: flex;
   min-height: 44em;
-  min-width: 100%;
+  width: 100%;
   flex-direction: column;
   align-items: center;
   padding-top: 2em;
@@ -126,10 +126,6 @@
   cursor: pointer;
 }
 
-/* .button:hover {
-  box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
-} */
-
 @media (min-width: 992px) and (max-width: 1299px) {
   .header {
     min-height: 40em;
@@ -229,11 +225,17 @@
   }
 }
 
-/* @media (min-width: 769px) and (max-width: 991px) {
+@media (min-width: 769px) and (max-width: 991px) {
   .header {
     width: 100%;
   }
-} */
+
+  .header_container-bottom {
+    max-width: 53em;
+    max-height: 20em;
+    align-items: flex-start;
+  }
+}
 
 @media (min-width: 320px) and (max-width: 1299px) {
   .icons {

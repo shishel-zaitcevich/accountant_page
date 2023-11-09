@@ -3,6 +3,7 @@ export interface CardsTypes {
   quantity: string;
   price: number;
   timeline: string;
+  description?: string;
 }
 
 export interface StateInterface {

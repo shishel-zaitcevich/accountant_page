@@ -3,7 +3,7 @@ import '../footer/footer.scss';
 
 export function Footer() {
   return (
-    <div className="footer_other">
+    <div className="footer_other footer_info">
       <img src="./assets/image.svg" alt="logo" className="logo" />
       <a href="mailto:abracadabra@mail.ru" className="section_text link">
         abracadabra@mail.ru

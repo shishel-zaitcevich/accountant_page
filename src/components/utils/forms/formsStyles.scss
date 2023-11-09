@@ -1,4 +1,30 @@
-.container {
+.form_container {
   width: 100%;
   margin-top: 40px;
+}
+
+.review {
+  border: 1px solid #ef2a82;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.review_form_buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+@media (min-width: 600px) {
+  .review {
+    max-width: 600px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .review {
+    max-width: 800px;
+  }
 }

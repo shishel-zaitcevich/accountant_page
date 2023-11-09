@@ -163,8 +163,6 @@
 
   .footer {
     max-height: 72em;
-    /* background-image: url('../../../../../public/assets/background_bottom_mobile.svg');
-    background-size: contain; */
     background-position: 28em 0;
   }
 
@@ -172,16 +170,11 @@
     min-height: 100%;
   }
 
-  /* .section_text-mobile {
-    max-width: 93%;
-  } */
-
   .footer_info .section_text {
     display: none;
   }
 
   .footer_title {
-    /* margin-left: 0.5em; */
     font-size: 2em;
     margin: 0;
   }

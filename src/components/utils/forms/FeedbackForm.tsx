@@ -7,6 +7,9 @@ import {
   Typography,
   List,
   ListItem,
+  styled,
+  Checkbox,
+  FormControlLabel,
 } from '@mui/material';
 import '../forms/formsStyles.scss';
 
@@ -29,87 +32,115 @@ const FeedbackForm: React.FC = () => {
   );
 
   useEffect(() => {
-    // Загрузка отзывов из localStorage при монтировании компонента
     const storedReviews = JSON.parse(localStorage.getItem('reviews') || '[]');
     setReviews(storedReviews);
   }, []);
 
   useEffect(() => {
-    // Сохранение отзывов в localStorage при их изменении
     localStorage.setItem('reviews', JSON.stringify(reviews));
   }, [reviews]);
 
   const onSubmit: SubmitHandler<FormData> = (data) => {
-    // Отправка данных отзыва
     console.log(data);
-    setReviews([...reviews, { name: data.name, review: data.review }]);
-    setValue('name', '');
-    setValue('review', '');
+    if (data.review.trim()) {
+      setReviews([...reviews, { name: data.name, review: data.review }]);
+      setValue('name', '');
+      setValue('email', '');
+      setValue('review', '');
+    }
   };
 
+  const CustomButton = styled(Button)({
+    backgroundColor: '#1F2F5C',
+    color: '#FFFFFF',
+    '&:hover': {
+      backgroundColor: '#ef2a82',
+    },
+  });
+
   return (
-    <div className="container">
-      <Container maxWidth="sm">
-        <Typography variant="h4" align="center" gutterBottom>
-          Оставить отзыв
-        </Typography>
+    <>
+      <div className="form_container">
+        <Container maxWidth="sm">
+          <Typography variant="h4" align="center" gutterBottom>
+            Оставить отзыв
+          </Typography>
 
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <TextField
-            label="Имя"
-            {...register('name', { required: 'Это поле обязательно' })}
-            fullWidth
-            margin="normal"
-            error={!!errors.name}
-            helperText={errors.name?.message}
-          />
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <TextField
+              label="Имя"
+              {...register('name', { required: 'Это поле обязательно' })}
+              fullWidth
+              margin="normal"
+              error={!!errors.name}
+              helperText={errors.name?.message}
+            />
 
-          <TextField
-            label="Email"
-            {...register('email', {
-              required: 'Это поле обязательно',
-              pattern: {
-                value: /\S+@\S+\.\S+/,
-                message: 'Некорректный email',
-              },
-            })}
-            fullWidth
-            margin="normal"
-            error={!!errors.email}
-            helperText={errors.email?.message}
-          />
+            <TextField
+              label="Email"
+              {...register('email', {
+                required: 'Это поле обязательно',
+                pattern: {
+                  value: /\S+@\S+\.\S+/,
+                  message: 'Некорректный email',
+                },
+              })}
+              fullWidth
+              margin="normal"
+              error={!!errors.email}
+              helperText={errors.email?.message}
+            />
 
-          <TextField
-            label="Отзыв"
-            {...register('review', { required: 'Это поле обязательно' })}
-            fullWidth
-            margin="normal"
-            multiline
-            rows={4}
-            error={!!errors.review}
-            helperText={errors.review?.message}
-          />
+            <TextField
+              label="Отзыв"
+              {...register('review', { required: 'Это поле обязательно' })}
+              fullWidth
+              margin="normal"
+              multiline
+              rows={4}
+              error={!!errors.review}
+              helperText={errors.review?.message}
+            />
+            <div className="review_form_buttons">
+              <FormControlLabel
+                control={
+                  <Checkbox
+                    defaultChecked
+                    sx={{
+                      '& .MuiSvgIcon-root': { fontSize: 28 },
+                      color: '#1F2F5C',
+                    }}
+                  />
+                }
+                label="Нажимая кнопку Отправить, Вы даете согласие на обработку Ваших персональных данных."
+              />
+              <CustomButton type="submit" variant="contained">
+                Отправить отзыв
+              </CustomButton>
+            </div>
+          </form>
+        </Container>
 
-          <Button type="submit" variant="contained" color="primary" fullWidth>
-            Отправить отзыв
-          </Button>
-        </form>
-      </Container>
-      <Container>
-        <Typography variant="h5" align="center" gutterBottom>
-          Отзывы
-        </Typography>
-        <List>
-          {reviews.map((review, index) => (
-            <ListItem key={index}>
-              <Typography>
-                <strong>{review.name}</strong>: {review.review}
-              </Typography>
-            </ListItem>
-          ))}
-        </List>
-      </Container>
-    </div>
+        <div className="form_container">
+          <Container maxWidth="sm">
+            <Typography variant="h5" align="center" gutterBottom>
+              Отзывы
+            </Typography>
+            <List>
+              {reviews.map((review, index) => (
+                <ListItem key={index} className="review">
+                  <Typography>
+                    <strong>{review.name}</strong>
+                    : <br />
+                    {review.review}
+                  </Typography>
+                </ListItem>
+              ))}
+            </List>
+          </Container>
+        </div>
+      </div>
+    </>
   );
 };
 

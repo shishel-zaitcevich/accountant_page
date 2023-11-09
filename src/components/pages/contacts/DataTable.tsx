@@ -26,11 +26,19 @@ const DataTable: React.FC<TableProps> = ({ data }) => {
             </tr>
             <tr className="row">
               <td className="cell table_header">Телефон:</td>
-              <td className="cell">{person.phone}</td>
+              <td className="cell">
+                <a href="tel:+1234567890" className="link">
+                  {person.phone}
+                </a>
+              </td>
             </tr>
             <tr className="row">
               <td className="cell table_header">E-mail:</td>
-              <td className="cell">{person.email}</td>
+              <td className="cell">
+                <a href="mailto:example@example.com" className="link">
+                  {person.email}
+                </a>
+              </td>
             </tr>
           </React.Fragment>
         ))}

@@ -22,7 +22,6 @@ const OrderForm: React.FC<OrderFormProps> = ({ handleClose }) => {
 
   const onSubmit = (data: FormData) => {
     console.log(data);
-    // Допустим, вы хотите закрыть форму после отправки
     handleClose();
   };
 

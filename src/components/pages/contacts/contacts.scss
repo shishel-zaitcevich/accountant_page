@@ -13,23 +13,17 @@
   margin-bottom: 40px;
 }
 
-// .header_other-pages {
-//   height: 200px;
-//   background-color: #172856;
-// }
-
-// .header_other-pages {
-//   min-height: 8em;
-//   margin-bottom: 20px;
-//   // position: fixed;
-// }
-
 .main_contacts {
-  @include center;
   max-width: 900px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   margin-top: 40px;
   gap: 40px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 }
 
 .contacts-description {
@@ -39,22 +33,22 @@
 @keyframes slideInRight {
   from {
     transform: translateX(100%);
-    opacity: 0; /* Начальная непрозрачность */
+    opacity: 0;
   }
   to {
     transform: translateX(0);
-    opacity: 1; /* Конечная непрозрачность */
+    opacity: 1;
   }
 }
 
 @keyframes slideInLeft {
   from {
     transform: translateX(-100%);
-    opacity: 0; /* Начальная непрозрачность */
+    opacity: 0;
   }
   to {
     transform: translateX(0);
-    opacity: 1; /* Конечная непрозрачность */
+    opacity: 1;
   }
 }
 
@@ -62,10 +56,21 @@
   display: flex;
   align-items: center;
   overflow: hidden;
+  gap: 60px;
+
+  @media (max-width: 768px) {
+    text-align: center;
+    flex-direction: column;
+    gap: 20px;
+    .buh-description1,
+    .buh-description2 {
+      margin: 0;
+    }
+  }
 }
 
 @mixin image {
-  width: 355px;
+  max-width: 319px;
   border: 3px solid #ef2a82;
   border-radius: 20px;
 }
@@ -74,16 +79,17 @@
 .buh-description1,
 .buh-img2,
 .buh-description2 {
-  opacity: 0; /* Начальная непрозрачность */
+  opacity: 0;
 }
 
 .buh-img1 {
   @include image;
-  animation: slideInRight 1s ease-out forwards; /* forwards сохраняет состояние анимации после завершения */
+  animation: slideInRight 1s ease-out forwards;
 }
 
 @mixin buhdescription {
   max-width: 600px;
+  min-width: 300px;
   margin-left: 20px;
   margin-right: 20px;
   color: black;
@@ -91,15 +97,15 @@
 
 .buh-description1 {
   @include buhdescription;
-  animation: slideInRight 1s ease-out 0.5s forwards; /* forwards сохраняет состояние анимации после завершения */
+  animation: slideInRight 1s ease-out 0.5s forwards;
 }
 
 .buh-img2 {
   @include image;
-  animation: slideInLeft 1s ease-out forwards; /* forwards сохраняет состояние анимации после завершения */
+  animation: slideInLeft 1s ease-out forwards;
 }
 
 .buh-description2 {
   @include buhdescription;
-  animation: slideInLeft 1s ease-out 0.5s forwards; /* forwards сохраняет состояние анимации после завершения */
+  animation: slideInLeft 1s ease-out 0.5s forwards;
 }
