@@ -102,19 +102,6 @@ export const FeedbackForm: React.FC = () => {
               helperText={errors.review?.message}
             />
             <div className="review_form_buttons">
-              {/* <FormControlLabel
-                control={
-                  <Checkbox
-                    defaultChecked
-                    sx={{
-                      '& .MuiSvgIcon-root': { fontSize: 28 },
-                      color: '#1F2F5C',
-                    }}
-                  />
-                }
-                label="Нажимая кнопку Отправить, Вы даете согласие на обработку Ваших персональных данных."
-              /> */}
-
               <Controller
                 render={({ field }) => (
                   <FormControlLabel
