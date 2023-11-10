@@ -1,6 +1,7 @@
 // import './App.css';
 
 import { Routes, Route } from 'react-router';
+import { HashRouter } from 'react-router-dom';
 import { Main } from './components/pages/main_Page/MainPage';
 import { Contacts } from './components/pages/contacts/Contacts';
 import { FeedbackPage } from './components/pages/feedback/FeedbackPage';

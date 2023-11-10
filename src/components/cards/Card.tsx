@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../pages/main_Page/footer/Footer.css';
+import { data } from './data';
 
 interface CardProps {
   title: string;
@@ -18,9 +19,15 @@ export const Card: React.FC<CardProps> = ({
   index,
 }): JSX.Element => {
   const navigate = useNavigate();
-  function HandleClick() {
+  // const HandleClick = () => {
+  //   navigate(`/rates/${encodeURIComponent(title)}`);
+  // };
+
+  const handleClick = () => {
+    // Переход на страницу тарифов
     navigate('/rates');
-  }
+  };
+
   const isEven = index % 2 === 0;
 
   return (
@@ -51,14 +58,13 @@ export const Card: React.FC<CardProps> = ({
           >
             {timeline}
           </p>
-          <a href="">
-            <button
-              className={`button_bottom ${isEven ? 'light_button' : ''}`}
-              onClick={HandleClick}
-            >
-              Подробнее
-            </button>
-          </a>
+
+          <button
+            className={`button_bottom ${isEven ? 'light_button' : ''}`}
+            onClick={handleClick}
+          >
+            Подробнее
+          </button>
         </div>
       </div>
     </>

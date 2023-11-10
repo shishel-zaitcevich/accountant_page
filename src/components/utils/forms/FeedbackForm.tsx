@@ -12,6 +12,7 @@ import {
   FormControlLabel,
 } from '@mui/material';
 import '../forms/formsStyles.scss';
+import { CustomButton } from '../CustomButton';
 
 interface FormData {
   name: string;
@@ -49,14 +50,6 @@ const FeedbackForm: React.FC = () => {
       setValue('review', '');
     }
   };
-
-  const CustomButton = styled(Button)({
-    backgroundColor: '#1F2F5C',
-    color: '#FFFFFF',
-    '&:hover': {
-      backgroundColor: '#ef2a82',
-    },
-  });
 
   return (
     <>

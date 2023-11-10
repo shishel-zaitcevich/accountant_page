@@ -1,6 +1,7 @@
 import React from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { TextField, Button, Grid, Typography } from '@mui/material';
+import { CustomButton } from '../CustomButton';
 
 interface OrderFormProps {
   handleClose: () => void;
@@ -22,6 +23,7 @@ const OrderForm: React.FC<OrderFormProps> = ({ handleClose }) => {
 
   const onSubmit = (data: FormData) => {
     console.log(data);
+
     handleClose();
   };
 
@@ -108,9 +110,9 @@ const OrderForm: React.FC<OrderFormProps> = ({ handleClose }) => {
           />
         </Grid>
         <Grid item xs={12} style={{ textAlign: 'center', width: '100%' }}>
-          <Button type="submit" variant="contained" color="primary">
+          <CustomButton type="submit" variant="contained" color="primary">
             Отправить
-          </Button>
+          </CustomButton>
         </Grid>
       </Grid>
     </form>

@@ -1,26 +1,30 @@
-import React, { useState } from 'react';
-import { Modal, Backdrop, Fade, Button, Container } from '@mui/material';
-import OrderForm from '../forms/OrderForm'; // Путь к вашему файлу с формой
+import React, { useEffect, useState } from 'react';
+import { Modal, Backdrop, Fade, Container } from '@mui/material';
+import OrderForm from '../forms/OrderForm';
 
-const ModalWindow: React.FC = () => {
+export interface ModalWindowProps {
+  handleOpen: () => void;
+  handleClose: () => void;
+}
+
+const ModalWindow: React.FC<ModalWindowProps> = ({
+  handleOpen,
+  handleClose,
+}) => {
   const [open, setOpen] = useState(false);
-
-  const handleOpen = () => {
+  useEffect(() => {
     setOpen(true);
-  };
-
-  const handleClose = () => {
+  }, []);
+  const handleCloseModal = () => {
     setOpen(false);
+    handleClose();
   };
 
   return (
     <div>
-      <Button onClick={handleOpen} variant="contained" color="primary">
-        Открыть форму
-      </Button>
       <Modal
         open={open}
-        onClose={handleClose}
+        onClose={handleCloseModal}
         closeAfterTransition
         BackdropComponent={Backdrop}
         BackdropProps={{
@@ -33,10 +37,10 @@ const ModalWindow: React.FC = () => {
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              height: '100vh', // 100% высоты экрана
+              height: '100vh',
             }}
           >
-            <OrderForm handleClose={handleClose} />
+            <OrderForm handleClose={handleCloseModal} />
           </Container>
         </Fade>
       </Modal>
@@ -45,13 +49,3 @@ const ModalWindow: React.FC = () => {
 };
 
 export default ModalWindow;
-
-// import ModalWindow from '../../utils/modalWindow/Modal';
-
-// export function Contacts() {
-//   return (
-//     <>
-//       <ModalWindow />
-//     </>
-//   );
-// }

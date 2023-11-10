@@ -165,10 +165,18 @@
   }
 }
 
-@media (min-width: 320px) and (max-width: 768px) {
+
+@media (min-width: 320px) and (max-width: 495px) {
   .header {
     height: 54em;
     background-position: 0 54em;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  .header {
+    /* height: 54em;
+    background-position: 0 54em; */
     min-width: 322px;
     background-image: url('../../../../../public/assets/background_top_mobile.svg');
     overflow-x: hidden;
