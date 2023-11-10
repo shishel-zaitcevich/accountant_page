@@ -23,15 +23,18 @@
   // // max-width: 1200px;
   // margin: 0 auto;
   min-width: 100%;
-  min-height: 4em;
+  min-height: 6em;
   margin: 0 auto;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  padding-left: 20px;
+  // justify-content: center;
+  // align-items: center;
 
-  @media (max-width: 768px) {
-    flex-direction: column;
-    text-align: center;
+  @media (max-width: 1200px) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 10px;
   }
 }
 
@@ -39,8 +42,6 @@
   min-width: 6em;
   margin: 0;
   margin-right: 3em;
-
   @media (max-width: 768px) {
-    margin-bottom: 10px;
   }
 }

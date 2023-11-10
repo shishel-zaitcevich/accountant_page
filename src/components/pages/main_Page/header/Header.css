@@ -126,15 +126,26 @@
   cursor: pointer;
 }
 
+@media (max-width: 1299px) {
+  .header_container-top {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    ;
+  }
+}
+
 @media (min-width: 992px) and (max-width: 1299px) {
   .header {
     min-height: 40em;
   }
 
-  .header_container-top {
+  /* .header_container-top {
     justify-content: flex-start;
     margin-left: 4em;
-  }
+  } */
 
   .icons {
     left: 93%;

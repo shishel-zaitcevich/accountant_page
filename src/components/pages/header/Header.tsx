@@ -7,7 +7,7 @@ export function Header() {
     <header className="header-other">
       <Icons />
       <div className="header_container-top">
-        <img src="./assets/image.svg" alt="logo" className="logo" />
+        <img src="./assets/image.svg" alt="logo" className="logo header_logo" />
         <Navigation />
       </div>
     </header>

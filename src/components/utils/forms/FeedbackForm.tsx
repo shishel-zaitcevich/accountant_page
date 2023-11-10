@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { useForm, SubmitHandler } from 'react-hook-form';
+import React, { FC, useEffect, useState } from 'react';
+import { useForm, SubmitHandler, Controller } from 'react-hook-form';
 import {
   TextField,
   Button,
@@ -18,14 +18,16 @@ interface FormData {
   name: string;
   email: string;
   review: string;
+  agree: boolean;
 }
 
-const FeedbackForm: React.FC = () => {
+export const FeedbackForm: React.FC = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
     setValue,
+    control,
   } = useForm<FormData>();
 
   const [reviews, setReviews] = useState<{ name: string; review: string }[]>(
@@ -43,11 +45,16 @@ const FeedbackForm: React.FC = () => {
 
   const onSubmit: SubmitHandler<FormData> = (data) => {
     console.log(data);
-    if (data.review.trim()) {
-      setReviews([...reviews, { name: data.name, review: data.review }]);
-      setValue('name', '');
-      setValue('email', '');
-      setValue('review', '');
+    if (data.agree) {
+      if (data.review.trim()) {
+        setReviews([...reviews, { name: data.name, review: data.review }]);
+        setValue('name', '');
+        setValue('email', '');
+        setValue('review', '');
+      }
+    } else {
+      // Вывести ошибку, так как чекбокс не отмечен
+      console.log('Ошибка: Подтвердите согласие');
     }
   };
 
@@ -95,7 +102,7 @@ const FeedbackForm: React.FC = () => {
               helperText={errors.review?.message}
             />
             <div className="review_form_buttons">
-              <FormControlLabel
+              {/* <FormControlLabel
                 control={
                   <Checkbox
                     defaultChecked
@@ -106,7 +113,33 @@ const FeedbackForm: React.FC = () => {
                   />
                 }
                 label="Нажимая кнопку Отправить, Вы даете согласие на обработку Ваших персональных данных."
+              /> */}
+
+              <Controller
+                render={({ field }) => (
+                  <FormControlLabel
+                    control={
+                      <Checkbox
+                        {...field}
+                        defaultChecked
+                        sx={{
+                          '& .MuiSvgIcon-root': { fontSize: 28 },
+                          color: '#1F2F5C',
+                        }}
+                        onChange={(e) => field.onChange(e.target.checked)}
+                      />
+                    }
+                    label="Нажимая кнопку Отправить, Вы даете согласие на обработку Ваших персональных данных."
+                  />
+                )}
+                name="agree"
+                control={control}
+                rules={{ required: 'Согласие обязательно' }}
               />
+              {errors.agree && (
+                <span style={{ color: 'red' }}>{errors.agree.message}</span>
+              )}
+
               <CustomButton type="submit" variant="contained">
                 Отправить отзыв
               </CustomButton>
