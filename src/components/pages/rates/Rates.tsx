@@ -19,12 +19,7 @@ export function Rates() {
     <>
       <div className="container">
         <Header />
-        <Rate
-          handleOpen={handleOpen}
-          handleClose={function (): void {
-            throw new Error('Function not implemented.');
-          }}
-        />
+        <Rate handleOpen={handleOpen} handleClose={handleClose} />
         <Footer />
         {modalOpen && (
           <ModalWindow handleOpen={handleOpen} handleClose={handleClose} />

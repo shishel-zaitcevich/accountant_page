@@ -1,7 +1,6 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+
 import '../pages/main_Page/footer/Footer.css';
-import { data } from './data';
 
 interface CardProps {
   title: string;
@@ -9,6 +8,8 @@ interface CardProps {
   price: number;
   timeline: string;
   index: number;
+  id: string;
+  onClickHander: () => void;
 }
 
 export const Card: React.FC<CardProps> = ({
@@ -17,17 +18,9 @@ export const Card: React.FC<CardProps> = ({
   price,
   timeline,
   index,
+
+  onClickHander,
 }): JSX.Element => {
-  const navigate = useNavigate();
-  // const HandleClick = () => {
-  //   navigate(`/rates/${encodeURIComponent(title)}`);
-  // };
-
-  const handleClick = () => {
-    // Переход на страницу тарифов
-    navigate('/rates');
-  };
-
   const isEven = index % 2 === 0;
 
   return (
@@ -61,7 +54,7 @@ export const Card: React.FC<CardProps> = ({
 
           <button
             className={`button_bottom ${isEven ? 'light_button' : ''}`}
-            onClick={handleClick}
+            onClick={onClickHander}
           >
             Подробнее
           </button>

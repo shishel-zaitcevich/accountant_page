@@ -1,4 +1,8 @@
+import { To } from 'react-router-dom';
+
 export interface CardsTypes {
+  path: To;
+  id: string;
   title: string;
   quantity: string;
   price: number;

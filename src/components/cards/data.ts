@@ -2,6 +2,8 @@ import { CardsTypes } from './CardsTypes';
 
 export const data: CardsTypes[] = [
   {
+    path: '/rates',
+    id: 'id1',
     title: 'Стартовый',
     quantity: 'численность 1 человек',
     price: 5000,
@@ -15,6 +17,8 @@ export const data: CardsTypes[] = [
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quam beatae, sunt consequatur, eaque, vitae nam quae dicta commodi blanditiis sint amet architecto est ducimus fugit dolor exercitationem officia provident.',
   },
   {
+    path: '/rates',
+    id: 'id2',
     title: 'Стандарт',
     quantity: 'численность 1 человек',
     price: 6000,
@@ -27,6 +31,8 @@ export const data: CardsTypes[] = [
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quam beatae, sunt consequatur, eaque, vitae nam quae dicta commodi blanditiis sint amet architecto est ducimus fugit dolor exercitationem officia provident.',
   },
   {
+    path: '/rates',
+    id: 'id3',
     title: 'Премиум',
     quantity: 'численность 1 человек',
     price: 7000,
@@ -39,6 +45,8 @@ export const data: CardsTypes[] = [
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quam beatae, sunt consequatur, eaque, vitae nam quae dicta commodi blanditiis sint amet architecto est ducimus fugit dolor exercitationem officia provident.',
   },
   {
+    path: '/rates',
+    id: 'id4',
     title: 'Персональный',
     quantity: 'численность 1 человек',
     price: 8000,
@@ -51,6 +59,8 @@ export const data: CardsTypes[] = [
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quam beatae, sunt consequatur, eaque, vitae nam quae dicta commodi blanditiis sint amet architecto est ducimus fugit dolor exercitationem officia provident.',
   },
   {
+    path: '/rates',
+    id: 'id5',
     title: 'Супер-Пупер',
     quantity: 'численность 0 человек',
     price: 9000,
@@ -63,6 +73,8 @@ export const data: CardsTypes[] = [
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quam beatae, sunt consequatur, eaque, vitae nam quae dicta commodi blanditiis sint amet architecto est ducimus fugit dolor exercitationem officia provident.',
   },
   {
+    path: '/rates',
+    id: 'id6',
     title: 'Нулевой',
     quantity: 'численность 1 человек',
     price: 4000,

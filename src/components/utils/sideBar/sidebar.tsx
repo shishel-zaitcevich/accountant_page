@@ -28,7 +28,10 @@ export function SideBar(
       <Link to="/reviews" className="menu-item">
         Отзывы
       </Link>
-      <Link to="/laws" className="menu-item">
+      <Link
+        to="https://www.kontur-extern.ru/info/37534-top_12_izmeneniy_dlya_buhgaltera"
+        className="menu-item"
+      >
         Новое в законодательстве
       </Link>
       <Link to="tel:+79516585914" className="menu-item">

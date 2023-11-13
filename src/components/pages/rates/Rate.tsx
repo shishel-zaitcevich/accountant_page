@@ -1,8 +1,25 @@
 import { data } from '../../cards/data';
 import { ModalWindowProps } from '../../utils/modalWindow/Modal';
+import { useEffect } from 'react';
 import '../rates/rateStyle.scss';
+import { useLocation } from 'react-router-dom';
 
 export const Rate: React.FC<ModalWindowProps> = ({ handleOpen }) => {
+  const { state } = useLocation();
+  useEffect(() => {
+    const scrollToRef = (id: string) => {
+      const element = document.querySelector(`#${id}`);
+
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    };
+
+    if (state?.blockId) {
+      scrollToRef(state.blockId);
+    }
+  }, [state]);
+
   const handleOpenClick = () => {
     handleOpen();
   };
@@ -10,7 +27,7 @@ export const Rate: React.FC<ModalWindowProps> = ({ handleOpen }) => {
   return (
     <div className={`block`}>
       {data.map((item) => (
-        <div key={item.title} className="rate">
+        <div key={item.id} className="rate" id={item.id}>
           <div className="rate_info">
             <div className="rate_icon">
               {item.image ? (

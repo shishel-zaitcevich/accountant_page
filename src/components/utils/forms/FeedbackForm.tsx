@@ -1,13 +1,11 @@
-import React, { FC, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useForm, SubmitHandler, Controller } from 'react-hook-form';
 import {
   TextField,
-  Button,
   Container,
   Typography,
   List,
   ListItem,
-  styled,
   Checkbox,
   FormControlLabel,
 } from '@mui/material';
@@ -46,14 +44,15 @@ export const FeedbackForm: React.FC = () => {
   const onSubmit: SubmitHandler<FormData> = (data) => {
     console.log(data);
     if (data.agree) {
-      if (data.review.trim()) {
+      if (data.name.trim() && data.email.trim() && data.review.trim()) {
         setReviews([...reviews, { name: data.name, review: data.review }]);
         setValue('name', '');
         setValue('email', '');
         setValue('review', '');
+      } else {
+        console.log('Ошибка: Заполните все поля перед отправкой');
       }
     } else {
-      // Вывести ошибку, так как чекбокс не отмечен
       console.log('Ошибка: Подтвердите согласие');
     }
   };

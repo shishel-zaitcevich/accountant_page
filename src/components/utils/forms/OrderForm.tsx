@@ -1,6 +1,6 @@
 import React from 'react';
 import { useForm, Controller } from 'react-hook-form';
-import { TextField, Button, Grid, Typography } from '@mui/material';
+import { TextField, Grid, Typography } from '@mui/material';
 import { CustomButton } from '../CustomButton';
 
 interface OrderFormProps {
@@ -16,6 +16,7 @@ interface FormData {
 
 const OrderForm: React.FC<OrderFormProps> = ({ handleClose }) => {
   const {
+    register,
     handleSubmit,
     control,
     formState: { errors },
@@ -50,13 +51,13 @@ const OrderForm: React.FC<OrderFormProps> = ({ handleClose }) => {
             name="name"
             control={control}
             defaultValue=""
-            render={({ field }) => (
+            render={({}) => (
               <TextField
-                {...field}
-                label="Имя"
+                {...register('name', { required: 'Это поле обязательно' })}
                 fullWidth
-                variant="outlined"
                 margin="normal"
+                error={!!errors.name}
+                helperText={errors.name?.message}
               />
             )}
           />
@@ -66,13 +67,15 @@ const OrderForm: React.FC<OrderFormProps> = ({ handleClose }) => {
             name="organization"
             control={control}
             defaultValue=""
-            render={({ field }) => (
+            render={({}) => (
               <TextField
-                {...field}
-                label="Название организации"
+                {...register('organization', {
+                  required: 'Это поле обязательно',
+                })}
                 fullWidth
-                variant="outlined"
                 margin="normal"
+                error={!!errors.organization}
+                helperText={errors.organization?.message}
               />
             )}
           />
@@ -82,13 +85,15 @@ const OrderForm: React.FC<OrderFormProps> = ({ handleClose }) => {
             name="phone"
             control={control}
             defaultValue=""
-            render={({ field }) => (
+            render={({}) => (
               <TextField
-                {...field}
-                label="Контактный телефон"
+                {...register('phone', {
+                  required: 'Это поле обязательно',
+                })}
                 fullWidth
-                variant="outlined"
                 margin="normal"
+                error={!!errors.phone}
+                helperText={errors.phone?.message}
               />
             )}
           />
@@ -98,13 +103,15 @@ const OrderForm: React.FC<OrderFormProps> = ({ handleClose }) => {
             name="email"
             control={control}
             defaultValue=""
-            render={({ field }) => (
+            render={({}) => (
               <TextField
-                {...field}
-                label="Электронная почта"
+                {...register('email', {
+                  required: 'Это поле обязательно',
+                })}
                 fullWidth
-                variant="outlined"
                 margin="normal"
+                error={!!errors.email}
+                helperText={errors.email?.message}
               />
             )}
           />

@@ -4,10 +4,11 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './carousel.css';
 import { data } from '../../cards/data';
+import { useNavigate } from 'react-router';
 
 export function SimpleCarousel() {
+  const navigate = useNavigate();
   const settings = {
-    // dots: true,
     infinite: true,
     arrows: true,
     speed: 1500,
@@ -33,16 +34,21 @@ export function SimpleCarousel() {
 
   return (
     <Slider {...settings}>
-      {data.map((data, index) => (
-        <Card
-          key={data.title}
-          title={data.title}
-          quantity={data.quantity}
-          price={data.price}
-          timeline={data.timeline}
-          index={index}
-        />
-      ))}
+      {data.map((data, index) => {
+        const state = { state: { blockId: data.id ?? null } };
+        return (
+          <Card
+            key={data.id}
+            title={data.title}
+            quantity={data.quantity}
+            price={data.price}
+            timeline={data.timeline}
+            index={index}
+            id={data.id}
+            onClickHander={() => navigate(data.path, state)}
+          />
+        );
+      })}
     </Slider>
   );
 }

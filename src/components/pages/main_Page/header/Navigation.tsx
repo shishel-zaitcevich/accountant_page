@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './Header.css';
 // import { BurgerMenu } from '../../../utils/burgerMenu/burgerMenu';
-import { SideBar } from '../../../utils/burgerMenu/sidebar';
+import { SideBar } from '../../../utils/sideBar/sidebar';
 
 export function Navigation() {
   if (window.innerWidth >= 1300) {
