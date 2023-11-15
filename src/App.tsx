@@ -5,7 +5,7 @@ import { Main } from './components/pages/main_Page/MainPage';
 import { Contacts } from './components/pages/contacts/Contacts';
 import { FeedbackPage } from './components/pages/feedback/FeedbackPage';
 import { Products } from './components/pages/products/Products';
-import { Calculation } from './components/pages/calculation/Calculation';
+import { Calculation } from './components/pages/calculation/calculationForms/Calculation';
 import { Rates } from './components/pages/rates/Rates';
 import ScrollToTop from './components/utils/scrollToTop';
 

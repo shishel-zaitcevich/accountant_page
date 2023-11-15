@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { SimpleCarousel } from '../../../utils/carousel/carousel';
 import './Footer.css';
 
@@ -9,10 +10,10 @@ export function FooterTop() {
         <p className="text section_text">
           Мы предусмотрели для Вас самые лучшие условия комплексного
           обслуживания. Выберите тот тариф, который подходит именно Вам!
-          Подробнее с тарифами можно ознакомиться на вкладке{' '}
-          <a href="/rates" className="link">
-            тарифы
-          </a>
+          Подробнее с тарифами можно ознакомиться на вкладке
+          <Link to="/rates" className="link">
+            {' тарифы'}
+          </Link>
         </p>
       </div>
       <SimpleCarousel />

@@ -107,7 +107,7 @@ export const FeedbackForm: React.FC = () => {
                     control={
                       <Checkbox
                         {...field}
-                        defaultChecked
+                        // defaultChecked
                         sx={{
                           '& .MuiSvgIcon-root': { fontSize: 28 },
                           color: '#1F2F5C',
@@ -115,7 +115,7 @@ export const FeedbackForm: React.FC = () => {
                         onChange={(e) => field.onChange(e.target.checked)}
                       />
                     }
-                    label="Нажимая кнопку Отправить, Вы даете согласие на обработку Ваших персональных данных."
+                    label="Нажимите, чтобы подтвердить, что Вы даете согласие на обработку Ваших персональных данных."
                   />
                 )}
                 name="agree"

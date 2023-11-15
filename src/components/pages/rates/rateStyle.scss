@@ -20,26 +20,28 @@
   flex-wrap: wrap;
   justify-content: space-around;
   margin: 20px auto;
+  // padding-left: 20px;
+  // padding-right: 20px;
 }
 
 .rate {
   @include column;
   align-items: center;
   justify-content: space-between;
-  max-width: 350px;
+  min-width: 310px;
   min-height: 350px;
   margin: 20px;
 }
 
 .rate_info {
   @include row;
-  justify-content: space-between;
-  width: 350px;
+  justify-content: space-around;
+  min-width: 310px;
   margin-bottom: 20px;
 }
 
 .rate_card {
-  width: 300px;
+  min-width: 100px;
   text-align: center;
   padding-left: 10px;
 }
@@ -53,9 +55,10 @@
 .rate_description {
   font-size: 16px;
   text-align: center;
+  max-width: 350px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1200px) {
   .block {
     width: 100%;
   }

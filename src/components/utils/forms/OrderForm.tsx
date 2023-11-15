@@ -32,7 +32,7 @@ const OrderForm: React.FC<OrderFormProps> = ({ handleClose }) => {
     <form
       onSubmit={handleSubmit(onSubmit)}
       style={{
-        width: '50%',
+        width: '70%',
         marginTop: '20px',
         backgroundColor: 'white',
         padding: '20px',
@@ -53,6 +53,7 @@ const OrderForm: React.FC<OrderFormProps> = ({ handleClose }) => {
             defaultValue=""
             render={({}) => (
               <TextField
+                label="Ваше имя"
                 {...register('name', { required: 'Это поле обязательно' })}
                 fullWidth
                 margin="normal"
@@ -69,6 +70,7 @@ const OrderForm: React.FC<OrderFormProps> = ({ handleClose }) => {
             defaultValue=""
             render={({}) => (
               <TextField
+                label="Наименование организации"
                 {...register('organization', {
                   required: 'Это поле обязательно',
                 })}
@@ -87,6 +89,7 @@ const OrderForm: React.FC<OrderFormProps> = ({ handleClose }) => {
             defaultValue=""
             render={({}) => (
               <TextField
+                label="Телефон"
                 {...register('phone', {
                   required: 'Это поле обязательно',
                 })}
@@ -105,6 +108,7 @@ const OrderForm: React.FC<OrderFormProps> = ({ handleClose }) => {
             defaultValue=""
             render={({}) => (
               <TextField
+                label="Электронная почта"
                 {...register('email', {
                   required: 'Это поле обязательно',
                 })}
