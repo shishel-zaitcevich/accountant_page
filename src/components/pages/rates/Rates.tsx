@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Footer } from '../footer/Footer';
 import { Header } from '../header/Header';
 import { Rate } from './Rate';
-import ModalWindow from '../../utils/modalWindow/Modal';
+import ModalWindow from '../../utils/modalWindow/RatesModal';
 
 export function Rates() {
   const [modalOpen, setModalOpen] = useState(false);

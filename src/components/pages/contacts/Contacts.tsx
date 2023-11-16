@@ -12,10 +12,9 @@ export function Contacts({ data }: { data: Person[] }) {
         <Header />
         <main className="main_contacts">
           <p className="contacts-description section_text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
-            quam beatae, sunt consequatur, eaque, vitae nam quae dicta commodi
-            blanditiis sint amet architecto est ducimus fugit dolor
-            exercitationem officia provident.
+            Наши сотрудники готовы оказать всестороннюю помощь и поддержку в
+            решении любых Ваших вопросов. Высококлассные специалисты разберутся
+            с проблемой любой сложности в кратчийшие сроки.
           </p>
           <div className="buh">
             <img src="./assets/buh1.png" alt="" className="buh-img1" />

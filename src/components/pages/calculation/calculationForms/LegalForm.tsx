@@ -7,14 +7,10 @@ import {
 } from '@mui/material';
 import React from 'react';
 import { FormInputProps } from '../calculationTypes';
-import { Controller } from 'react-hook-form';
+import { Controller, useForm } from 'react-hook-form';
 
 const LegalForm = ({ name, control }: FormInputProps) => {
-  const [value, setValue] = React.useState<string>('ООО');
-
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setValue((event.target as HTMLInputElement).value);
-  };
+  const {} = useForm();
 
   return (
     <FormControl>
@@ -24,13 +20,12 @@ const LegalForm = ({ name, control }: FormInputProps) => {
       <Controller
         name={name}
         control={control}
-        defaultValue="ООО" // Установите значение по умолчанию, если нужно
         render={({ field }) => (
           <RadioGroup
             aria-labelledby="demo-controlled-radio-buttons-group"
             name="name"
-            value={value}
-            onChange={handleChange}
+            value={field.value}
+            onChange={(e) => field.onChange(e.target.value)}
           >
             <FormControlLabel value="ИП" control={<Radio />} label="ИП" />
             <FormControlLabel value="ООО" control={<Radio />} label="ООО" />

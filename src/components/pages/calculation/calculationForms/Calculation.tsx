@@ -1,42 +1,47 @@
-import React, { useEffect } from 'react';
+import React, { useState } from 'react';
+import { useForm } from 'react-hook-form';
 import { Footer } from '../../footer/Footer';
 import { Header } from '../../header/Header';
 import AccountantSystem from './AccountantSystem';
 import EmployeeForm from './EployeeForm.tsx';
 import LegalForm from './LegalForm';
-import CalculationSlider from './Slider';
+import { CustomSlider } from './Slider';
 import TaxTreatment from './TaxTreatment';
 import { CustomButton } from '../../../utils/CustomButton';
-
-import './calculationStyles.scss';
-import { TotalPrice } from '../logic/totalPrice';
-import { useForm } from 'react-hook-form';
 import { CalculationType } from '../calculationTypes';
+import { TotalPrice } from '../logic/totalPrice';
+import './calculationStyles.scss';
+import ModalResult from '../../../utils/modalWindow/CalculationResultModal';
 
 export function Calculation() {
   const {
-    handleSubmit,
     control,
     getValues,
-    formState: { errors },
+    formState: {},
   } = useForm<CalculationType>({
     mode: 'onChange',
     defaultValues: {
       quantity: 0,
       taxMode: '',
       organizationalForm: '',
-      employeeQuantity: 0,
       accountantSystem: false,
     },
   });
 
-  const values: CalculationType = getValues();
+  const [openModal, setOpenModal] = useState(false);
+  const [totalPrice, setTotalPrice] = useState(0);
 
-  useEffect(() => {
-    // Вызываем TotalPrice при изменении значений форм
-    TotalPrice(values);
-  }, [values]);
-  console.log(TotalPrice(values));
+  const onSubmit = function () {
+    const values: CalculationType = getValues();
+    const price = TotalPrice(values);
+    setTotalPrice(price);
+    setOpenModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setOpenModal(false);
+  };
+
   return (
     <>
       <div className="container">
@@ -47,23 +52,31 @@ export function Calculation() {
           </span>
           <div className="choice">
             <div className="calc_slider">
-              <CalculationSlider />
+              <CustomSlider name="quantity" control={control} />
             </div>
 
             <div className="radio_buttons">
-              <TaxTreatment />
+              <TaxTreatment name="taxMode" control={control} />
               <LegalForm name="organizationalForm" control={control} />
             </div>
-            <EmployeeForm />
-            <AccountantSystem />
+            <EmployeeForm name="employeeQuantity" control={control} />
+            <AccountantSystem name="accountantSystem" control={control} />
           </div>
 
-          <CustomButton sx={{ minWidth: '200px', maxWidth: '400px' }}>
+          <CustomButton
+            sx={{ minWidth: '200px', maxWidth: '400px' }}
+            onClick={onSubmit}
+          >
             Рассчитать примерную стоимость
           </CustomButton>
         </div>
         <Footer />
       </div>
+      <ModalResult
+        open={openModal}
+        onClose={handleCloseModal}
+        totalPrice={totalPrice}
+      />
     </>
   );
 }

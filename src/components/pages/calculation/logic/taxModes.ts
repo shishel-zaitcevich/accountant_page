@@ -13,5 +13,6 @@ export function taxModes(taxMode: string) {
   } else {
     taxAdditionalPrice = 2000;
   }
+
   return taxAdditionalPrice;
 }

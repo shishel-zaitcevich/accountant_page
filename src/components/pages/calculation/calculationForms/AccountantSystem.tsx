@@ -1,16 +1,18 @@
 import React from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { Checkbox, FormControlLabel } from '@mui/material';
+import { FormInputProps } from '../calculationTypes';
 
-const AccountantSystem: React.FC = () => {
+const AccountantSystem = ({ name, control }: FormInputProps) => {
   const {
     formState: {},
-    control,
   } = useForm<FormData>();
 
   return (
     <>
       <Controller
+        name={name}
+        control={control}
         render={({ field }) => (
           <FormControlLabel
             control={
@@ -26,8 +28,6 @@ const AccountantSystem: React.FC = () => {
             label="Используете ли вы свою программу ведения бухгалтерского учета?"
           />
         )}
-        name="values"
-        control={control}
       />
     </>
   );

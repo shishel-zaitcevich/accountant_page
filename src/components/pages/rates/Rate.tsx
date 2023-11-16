@@ -1,5 +1,5 @@
 import { data } from '../../cards/data';
-import { ModalWindowProps } from '../../utils/modalWindow/Modal';
+import { ModalWindowProps } from '../../utils/modalWindow/RatesModal';
 import { useEffect } from 'react';
 import '../rates/rateStyle.scss';
 import { useLocation } from 'react-router-dom';

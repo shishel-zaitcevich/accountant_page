@@ -6,5 +6,6 @@ export function organizationalLegalForm(organizationalForm: string) {
   } else {
     legalFormPrice = 1000;
   }
+
   return legalFormPrice;
 }

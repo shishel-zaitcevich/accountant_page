@@ -1,15 +1,9 @@
-import React, { useState } from 'react';
 import { TextField, Typography, Box } from '@mui/material';
+import { Controller, useForm } from 'react-hook-form';
+import { FormInputProps } from '../calculationTypes';
 
-const EmployeeForm: React.FC = () => {
-  const [employeeCount, setEmployeeCount] = useState<number>(0);
-
-  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const newValue = parseInt(event.target.value, 10);
-    if (!isNaN(newValue)) {
-      setEmployeeCount(newValue);
-    }
-  };
+const EmployeeForm = ({ name, control }: FormInputProps) => {
+  const { register } = useForm();
 
   return (
     <Box
@@ -17,17 +11,20 @@ const EmployeeForm: React.FC = () => {
       sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
     >
       <Typography variant="h5">Количество сотрудников</Typography>
-      <TextField
-        type="number"
-        value={employeeCount}
-        onChange={handleInputChange}
-        label="Введите количество"
-        variant="outlined"
-        margin="normal"
+      <Controller
+        name={name}
+        control={control}
+        render={({ field }) => (
+          <TextField
+            type="number"
+            {...field}
+            label="Введите количество"
+            variant="outlined"
+            margin="normal"
+            value={field.value !== undefined ? field.value : ''}
+          />
+        )}
       />
-      {/* <Typography variant="body1">
-        Текущее количество сотрудников: {employeeCount}
-      </Typography> */}
     </Box>
   );
 };
