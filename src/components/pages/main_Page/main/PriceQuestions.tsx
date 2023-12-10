@@ -1,25 +1,28 @@
+import { useTranslation } from 'react-i18next';
+
 export function PriceQuestions() {
+  const { t } = useTranslation();
   return (
     <section className="section section_other section-reverse">
       <article className="text-part text_part-reverse">
         <h2 className="section_title section_title-reverse">
-          Из чего складывается цена обслуживания?
+          {t('home:otherHomeTitle2')}
         </h2>
         <ul className="list">
           <li className="section_text text section_text-other">
-            Количество обрабатываемых документов;
+            {t('home:advantagesList1')}
           </li>
           <li className="section_text text section_text-other">
-            Количество регистрируемых операций;
+            {t('home:advantagesList2')}
           </li>
           <li className="section_text text section_text-other">
-            Количество сотрудников фирмы клиента;
+            {t('home:advantagesList3')}
           </li>
           <li className="section_text text section_text-other">
-            Выбранный режим налогообложения клиента;
+            {t('home:advantagesList4')}
           </li>
           <li className="section_text text section_text-other">
-            Форма собственности организации
+            {t('home:advantagesList5')}
           </li>
         </ul>
       </article>

@@ -1,0 +1,49 @@
+{
+  "en": {
+    "name": "Name",
+    "nameValue": "{{names}}",
+    "nameVal": {
+      "Алиса Селезнева": "Alice Seleznev",
+      "Анна Новак": "Ann Nowak"
+    },
+    "education": "Education",
+    "educationValue": "{{educationVal}}",
+    "educationVal": {
+      "Среднее": "Middle Education",
+      "Высшее": "Higher Education"
+    },
+    "functionality": "Functionality",
+    "functionalityValue": "{{funcVal}}",
+    "funcVal": {
+      "Бухгалтер": "Accountant"
+    },
+    "phone": "Phone",
+    "email": "Email",
+
+    "contactsDescription": "Our employees are ready to provide comprehensive assistance and support in solving any of your issues. Highly qualified specialists will deal with problems of any complexity in the shortest possible time."
+  },
+  "ru": {
+    "name": "Имя",
+    "nameValue": "{{names}}",
+    "nameVal": {
+      "Алиса Селезнева": "Алиса Селезнева",
+      "Анна Новак": "Анна Новак"
+    },
+    "education": "Образование",
+    "educationValue": "{{educationVal}}",
+    "educationVal": {
+      "Среднее": "Middle Education",
+      "Высшее": "Higher Education"
+    },
+    "functionality": "Функционал",
+
+    "functionalityValue": "{{funcVal}}",
+    "funcVal": {
+      "Бухгалтер": "Бухгалтер"
+    },
+    "phone": "Телефон",
+    "email": "Электронная почта",
+
+    "contactsDescription": "Наши сотрудники готовы оказать всестороннюю помощь и поддержку в решении любых Ваших вопросов. Высококлассные специалисты разберутся с проблемой любой сложности в кратчийшие сроки."
+  }
+}

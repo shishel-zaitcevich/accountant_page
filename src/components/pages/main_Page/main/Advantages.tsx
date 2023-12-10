@@ -1,15 +1,12 @@
+import { useTranslation } from 'react-i18next';
 import './Advantages.css';
 
 export function Advantages() {
+  const { t } = useTranslation();
   return (
     <section className="section">
-      <h2 className="section_title">Наши преимущества</h2>
-      <p className="section_text">
-        Удаленное бухгалтерское обслуживание - удобное решение для руководителей
-        ООО и индивидуальных предпринимателей. Предлагаем надежную бухгалтерскую
-        поддержку, позволяющую нашим клиентам экономить время и ресурсы для
-        направления их на развитие бизнеса.
-      </p>
+      <h2 className="section_title">{t('home:ourAdvantages')}</h2>
+      <p className="section_text">{t('home:ourAdvantagesDescription')}</p>
       <div className="advantages_listing">
         <div className="advantages_list ">
           <img
@@ -18,11 +15,10 @@ export function Advantages() {
             className="advantages_icons"
           />
           <div className="advantages_description">
-            <h4 className="advantages_title text">Комплексное обслуживание</h4>
-            <p className="section_text">
-              Наладим бухгалтерский, налоговый, финансовый и управленческий
-              учет, поможем оптимизировать затраты
-            </p>
+            <h4 className="advantages_title text">
+              {t('home:ourAdvantagesTitle1')}
+            </h4>
+            <p className="section_text">{t('home:ourAdvantagesDesc1')}</p>
           </div>
         </div>
 
@@ -34,12 +30,9 @@ export function Advantages() {
           />
           <div className="advantages_description">
             <h4 className="advantages_title text">
-              Высокий уровень проффесионализма
+              {t('home:ourAdvantagesTitle2')}
             </h4>
-            <p className="section_text">
-              Многолетний опыт наших сотрудников позволяет гарантировать
-              качество обслуживания по договору
-            </p>
+            <p className="section_text">{t('home:ourAdvantagesDesc2')}</p>
           </div>
         </div>
 
@@ -50,11 +43,10 @@ export function Advantages() {
             className="advantages_icons"
           />
           <div className="advantages_description">
-            <h4 className="advantages_title">Гибкая ценовая политика</h4>
-            <p className="section_text">
-              Стоимость услуг определяется индивидуально и зависит от объема и
-              сложности задач
-            </p>
+            <h4 className="advantages_title">
+              {t('home:ourAdvantagesTitle3')}
+            </h4>
+            <p className="section_text">{t('home:ourAdvantagesDesc3')}</p>
           </div>
         </div>
       </div>

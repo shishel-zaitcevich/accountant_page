@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { useTranslation } from 'react-i18next';
 import '../pages/main_Page/footer/Footer.css';
 
 interface CardProps {
@@ -21,6 +21,8 @@ export const Card: React.FC<CardProps> = ({
 
   onClickHander,
 }): JSX.Element => {
+  const { t } = useTranslation();
+
   const isEven = index % 2 === 0;
 
   return (
@@ -56,7 +58,7 @@ export const Card: React.FC<CardProps> = ({
             className={`button_bottom ${isEven ? 'light_button' : ''}`}
             onClick={onClickHander}
           >
-            Подробнее
+            {t('home:moreBtn')}
           </button>
         </div>
       </div>

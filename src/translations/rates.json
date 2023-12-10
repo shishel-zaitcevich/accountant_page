@@ -1,0 +1,58 @@
+{
+  "en": {
+    "common": {
+      "priceWord": "Price",
+      "startTimeline": "per month",
+      "ratesDescription": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quam beatae, sunt consequatur, eaque, vitae nam quae dicta commodi blanditiis sint amet architecto est ducimus fugit dolor exercitationem officia provident.",
+      "orderButn": "Order",
+      "quantity": "headcount of 1 person"
+    },
+    "start": {
+      "startTitle": "Starter"
+    },
+    "standard": {
+      "startTitle": "Standard"
+    },
+    "premium": {
+      "startTitle": "Premium"
+    },
+    "personal": {
+      "startTitle": "Personal"
+    },
+    "superPuper": {
+      "startTitle": "Super-Puper"
+    },
+    "zero": {
+      "startTitle": "Zero",
+      "startQuantity": "headcount of 0 person"
+    }
+  },
+  "ru": {
+    "common": {
+      "priceWord": "Цена",
+      "startTimeline": "в месяц",
+      "ratesDescription": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quam beatae, sunt consequatur, eaque, vitae nam quae dicta commodi blanditiis sint amet architecto est ducimus fugit dolor exercitationem officia provident.",
+      "orderButn": "Заказать",
+      "quantity": "численность 1 человек"
+    },
+    "start": {
+      "startTitle": "Стартовый"
+    },
+    "standard": {
+      "startTitle": "Стандарт"
+    },
+    "premium": {
+      "startTitle": "Премиум"
+    },
+    "personal": {
+      "startTitle": "Персональный"
+    },
+    "superPuper": {
+      "startTitle": "Супер-Пупер"
+    },
+    "zero": {
+      "startTitle": "Нулевой",
+      "startQuantity": "численность 0 человек"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "home": "Home",
+    "contacts": "Contacts",
+    "services": "Services",
+    "rates": "Rates",
+    "calculator": "Calculator",
+    "feedback": "Feedback",
+    "legislation": "New legislation"
+  },
+  "ru": {
+    "home": "Главная",
+    "contacts": "Контакты",
+    "services": "Услуги",
+    "rates": "Тарифы",
+    "calculator": "Калькулятор",
+    "feedback": "Отзывы",
+    "legislation": "Новое в законодательстве"
+  }
+}

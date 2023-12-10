@@ -1,18 +1,20 @@
 import { Link } from 'react-router-dom';
 import { SimpleCarousel } from '../../../utils/carousel/carousel';
+import { useTranslation } from 'react-i18next';
 import './Footer.css';
 
 export function FooterTop() {
+  const { t } = useTranslation();
   return (
     <>
       <div className="footer_top">
-        <h2 className="price_titles footer_title">Тарифные планы</h2>
+        <h2 className="price_titles footer_title">
+          {t('home:rateFooterTitle')}
+        </h2>
         <p className="text section_text">
-          Мы предусмотрели для Вас самые лучшие условия комплексного
-          обслуживания. Выберите тот тариф, который подходит именно Вам!
-          Подробнее с тарифами можно ознакомиться на вкладке
+          {t('home:rateFooterDescription')}
           <Link to="/rates" className="link">
-            {' тарифы'}
+            {` ${t('home:rates')}`}
           </Link>
         </p>
       </div>

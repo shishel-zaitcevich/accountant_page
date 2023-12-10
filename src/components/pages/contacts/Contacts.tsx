@@ -4,17 +4,18 @@ import AccountantsData from './AccountantsData';
 import { dataPeople } from './DataPeople';
 import { Person } from './ContactsTypes';
 import '../contacts/contacts.scss';
+import { useTranslation } from 'react-i18next';
 
 export function Contacts({ data }: { data: Person[] }) {
+  const { t } = useTranslation();
+
   return (
     <>
       <div className="contacts container">
         <Header />
         <main className="main_contacts">
           <p className="contacts-description section_text">
-            Наши сотрудники готовы оказать всестороннюю помощь и поддержку в
-            решении любых Ваших вопросов. Высококлассные специалисты разберутся
-            с проблемой любой сложности в кратчийшие сроки.
+            {t('contacts:contactsDescription')}
           </p>
           <div className="buh">
             <img src="./assets/buh1.png" alt="" className="buh-img1" />

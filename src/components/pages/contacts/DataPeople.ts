@@ -2,17 +2,17 @@ import { Person } from './ContactsTypes';
 
 export const dataPeople: Person[] = [
   {
-    name: 'Иван Иванов',
+    name: 'Алиса Селезнева',
     education: 'Высшее',
     functionality: 'Бухгалтер',
-    phone: '+7 123 456 7890',
-    email: 'ivan@example.com',
+    phone: '123 456 7890',
+    email: 'alice@example.com',
   },
   {
-    name: 'Татьяна Петрова',
+    name: 'Анна Новак',
     education: 'Среднее',
     functionality: 'Бухгалтер',
-    phone: '+7 987 654 3210',
-    email: 'tatyana@example.com',
+    phone: '987 654 3210',
+    email: 'anna@example.com',
   },
 ];
