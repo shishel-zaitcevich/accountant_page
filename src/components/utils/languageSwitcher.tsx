@@ -21,7 +21,7 @@ const LanguageSwitcher: React.FC = () => {
     marginLeft: '20px',
     marginRight: isScreenLessThan1300 ? '100px' : '20px',
     marginTop: isScreenLessThan1300 ? '0px' : '0px',
-    width: isScreenLessThan768 ? '40px' : '70px',
+    width: isScreenLessThan768 ? '60px' : '70px',
   };
 
   return (
