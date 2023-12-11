@@ -2,11 +2,14 @@ import React from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { Checkbox, FormControlLabel } from '@mui/material';
 import { FormInputProps } from '../calculationTypes';
+import { useTranslation } from 'react-i18next';
 
 const AccountantSystem = ({ name, control }: FormInputProps) => {
   const {
     formState: {},
   } = useForm<FormData>();
+
+  const { t } = useTranslation();
 
   return (
     <>
@@ -25,7 +28,7 @@ const AccountantSystem = ({ name, control }: FormInputProps) => {
                 onChange={(e) => field.onChange(e.target.checked)}
               />
             }
-            label="Используете ли вы свою программу ведения бухгалтерского учета?"
+            label={t('calculation:accountantProgram')}
           />
         )}
       />

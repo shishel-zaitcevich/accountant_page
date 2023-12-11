@@ -1,8 +1,10 @@
 import { Slider, Typography, Box } from '@mui/material';
 import { useController } from 'react-hook-form';
 import { FormInputProps } from '../calculationTypes';
+import { useTranslation } from 'react-i18next';
 
 export const CustomSlider = ({ name, control }: FormInputProps) => {
+  const { t } = useTranslation();
   const { field } = useController({
     name,
     control,
@@ -29,7 +31,7 @@ export const CustomSlider = ({ name, control }: FormInputProps) => {
         variant="h5"
         textAlign={'center'}
       >
-        Количество операций в месяц
+        {t('calculation:operationsNumb')}
       </Typography>
       <>
         <Slider
@@ -50,7 +52,7 @@ export const CustomSlider = ({ name, control }: FormInputProps) => {
           }}
         />
         <Typography textAlign={'center'} margin={'20px'} variant="h6">
-          {'Выбранное количество: '}
+          {t('calculation:selectedQuantity')}
           {field.value > 110 ? 'Больше 110' : field.value}
         </Typography>
       </>

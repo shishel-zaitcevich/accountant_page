@@ -42,7 +42,6 @@ export function SimpleCarousel() {
             title={data.title}
             quantity={data.quantity}
             price={data.price}
-            timeline={data.timeline}
             index={index}
             id={data.id}
             onClickHander={() => navigate(data.path, state)}

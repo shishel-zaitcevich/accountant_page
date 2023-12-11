@@ -56,7 +56,7 @@ export function Navigation() {
           to="tel:+79516585914"
           className={({ isActive }) => (isActive ? 'active_link' : 'link')}
         >
-          +7 951 658 59 14
+          +951 658 59 14
         </NavLink>
       </nav>
     );

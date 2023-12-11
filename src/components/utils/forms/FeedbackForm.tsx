@@ -11,6 +11,7 @@ import {
 } from '@mui/material';
 import '../forms/formsStyles.scss';
 import { CustomButton } from '../CustomButton';
+import { useTranslation } from 'react-i18next';
 
 interface FormData {
   name: string;
@@ -27,6 +28,8 @@ export const FeedbackForm: React.FC = () => {
     setValue,
     control,
   } = useForm<FormData>();
+
+  const { t } = useTranslation();
 
   const [reviews, setReviews] = useState<{ name: string; review: string }[]>(
     []
@@ -62,13 +65,13 @@ export const FeedbackForm: React.FC = () => {
       <div className="form_container">
         <Container maxWidth="sm">
           <Typography variant="h4" align="center" gutterBottom>
-            Оставить отзыв
+            {t('feedback:leaveReview')}
           </Typography>
 
           <form onSubmit={handleSubmit(onSubmit)}>
             <TextField
-              label="Имя"
-              {...register('name', { required: 'Это поле обязательно' })}
+              label={t('feedback:name')}
+              {...register('name', { required: t('common:requires') })}
               fullWidth
               margin="normal"
               error={!!errors.name}
@@ -78,10 +81,10 @@ export const FeedbackForm: React.FC = () => {
             <TextField
               label="Email"
               {...register('email', {
-                required: 'Это поле обязательно',
+                required: t('common:requires'),
                 pattern: {
                   value: /\S+@\S+\.\S+/,
-                  message: 'Некорректный email',
+                  message: t('common:invalidEmail'),
                 },
               })}
               fullWidth
@@ -91,8 +94,8 @@ export const FeedbackForm: React.FC = () => {
             />
 
             <TextField
-              label="Отзыв"
-              {...register('review', { required: 'Это поле обязательно' })}
+              label={t('feedback:feedback')}
+              {...register('review', { required: t('common:requires') })}
               fullWidth
               margin="normal"
               multiline
@@ -107,7 +110,6 @@ export const FeedbackForm: React.FC = () => {
                     control={
                       <Checkbox
                         {...field}
-                        // defaultChecked
                         sx={{
                           '& .MuiSvgIcon-root': { fontSize: 28 },
                           color: '#1F2F5C',
@@ -115,19 +117,19 @@ export const FeedbackForm: React.FC = () => {
                         onChange={(e) => field.onChange(e.target.checked)}
                       />
                     }
-                    label="Нажимите, чтобы подтвердить, что Вы даете согласие на обработку Ваших персональных данных."
+                    label={t('feedback:confirm')}
                   />
                 )}
                 name="agree"
                 control={control}
-                rules={{ required: 'Согласие обязательно' }}
+                rules={{ required: t('feedback:consentIsRequired') }}
               />
               {errors.agree && (
                 <span style={{ color: 'red' }}>{errors.agree.message}</span>
               )}
 
               <CustomButton type="submit" variant="contained">
-                Отправить отзыв
+                {t('feedback:submitBtn')}
               </CustomButton>
             </div>
           </form>
@@ -136,7 +138,7 @@ export const FeedbackForm: React.FC = () => {
         <div className="form_container">
           <Container maxWidth="sm">
             <Typography variant="h5" align="center" gutterBottom>
-              Отзывы
+              {t('feedback:reviews')}
             </Typography>
             <List>
               {reviews.map((review, index) => (

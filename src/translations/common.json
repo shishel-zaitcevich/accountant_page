@@ -6,7 +6,9 @@
     "rates": "Rates",
     "calculator": "Calculator",
     "feedback": "Feedback",
-    "legislation": "New legislation"
+    "legislation": "New legislation",
+    "requires": "This field is required",
+    "invalidEmail": "Invalid email"
   },
   "ru": {
     "home": "Главная",
@@ -15,6 +17,8 @@
     "rates": "Тарифы",
     "calculator": "Калькулятор",
     "feedback": "Отзывы",
-    "legislation": "Новое в законодательстве"
+    "legislation": "Новое в законодательстве",
+    "requires": "Это поле обязательно",
+    "invalidEmail": "Некорректный email"
   }
 }

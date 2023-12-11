@@ -1,0 +1,40 @@
+{
+  "en": {
+    "calcTitle": "Estimated service cost calculator",
+    "operationsNumb": "Number of operations per month",
+    "selectedQuantity": "Selected quantity ",
+    "taxationMode": "Taxation mode",
+    "simplifiedTax6": "Simplified tax system 6% (income) or patent",
+    "simplifiedTax15": "Simplified tax system 15% (income - expense), Unified Agricultural Tax and others",
+    "generalTaxSys": "General taxation system",
+    "legalForm": "Legal form",
+    "entrepreneur": "Individual entrepreneur",
+    "llc": "Limited liability company",
+    "numOfEmployees": "Number of employees",
+    "enterNum": "Enter number",
+    "accountantProgram": "Do you use your own accounting program?",
+    "calc": "Calculate estimated cost",
+    "culcRes": "Calculation result",
+    "amount": "Approximate amount of your service per month will be ",
+    "currency": " euro"
+  },
+  "ru": {
+    "calcTitle": "Калькулятор расчета примерной стоимости обслуживания",
+    "operationsNumb": "Количество операций в месяц",
+    "selectedQuantity": "Выбранное количество",
+    "taxationMode": "Режим налогообложения",
+    "simplifiedTax6": "УСН 6% (доход) или патент",
+    "simplifiedTax15": "УСН 15% (доход - расход), ЕСХН и другие",
+    "generalTaxSys": "ОСН",
+    "legalForm": "Организационно-правовая форма",
+    "entrepreneur": "ИП",
+    "llc": "ООО",
+    "numOfEmployees": "Количество сотрудников",
+    "enterNum": "Введите количество",
+    "accountantProgram": "Используете ли вы свою программу ведения бухгалтерского учета?",
+    "calc": "Рассчитать примерную стоимость",
+    "culcRes": "Результат расчета",
+    "amount": "Приблизительная сумма вашего обслуживания в месяц составит ",
+    "currency": " рублей"
+  }
+}

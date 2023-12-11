@@ -8,13 +8,15 @@ import {
 import React from 'react';
 import { FormInputProps } from '../calculationTypes';
 import { Controller, useForm } from 'react-hook-form';
+import { useTranslation } from 'react-i18next';
 
 const TaxTreatment = ({ name, control }: FormInputProps) => {
   const {} = useForm();
+  const { t } = useTranslation();
   return (
     <FormControl>
       <Typography variant="h5" textAlign={'center'}>
-        Режим налогообложения
+        {t('calculation:taxationMode')}
       </Typography>
       <Controller
         name={name}
@@ -29,14 +31,18 @@ const TaxTreatment = ({ name, control }: FormInputProps) => {
             <FormControlLabel
               value="УСН 6% (доход) или патент"
               control={<Radio />}
-              label="УСН 6% (доход) или патент"
+              label={t('calculation:simplifiedTax6')}
             />
             <FormControlLabel
               value="УСН 15% (доход - расход), ЕСХН и другие"
               control={<Radio />}
-              label="УСН 15% (доход - расход), ЕСХН и другие"
+              label={t('calculation:simplifiedTax15')}
             />
-            <FormControlLabel value="ОСН" control={<Radio />} label="ОСН" />
+            <FormControlLabel
+              value="ОСН"
+              control={<Radio />}
+              label={t('calculation:generalTaxSys')}
+            />
           </RadioGroup>
         )}
       />

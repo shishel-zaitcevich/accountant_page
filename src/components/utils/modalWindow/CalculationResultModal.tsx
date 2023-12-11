@@ -6,6 +6,7 @@ import {
   Typography,
   IconButton,
 } from '@mui/material';
+import { useTranslation } from 'react-i18next';
 
 interface ModalResultProps {
   open: boolean;
@@ -18,9 +19,10 @@ const ModalResult: React.FC<ModalResultProps> = ({
   onClose,
   totalPrice,
 }) => {
+  const { t } = useTranslation();
   return (
     <Dialog open={open} onClose={onClose}>
-      <DialogTitle>Результат расчета</DialogTitle>
+      <DialogTitle>{t('calculation:culcRes')}</DialogTitle>
       <IconButton
         edge="end"
         color="inherit"
@@ -32,8 +34,8 @@ const ModalResult: React.FC<ModalResultProps> = ({
       </IconButton>
       <DialogContent>
         <Typography>
-          Приблизительная сумма вашего обслуживания в месяц составит{' '}
-          {totalPrice} рублей.
+          {t('calculation:amount')}
+          {totalPrice} {t('calculation:currency')}
         </Typography>
       </DialogContent>
     </Dialog>

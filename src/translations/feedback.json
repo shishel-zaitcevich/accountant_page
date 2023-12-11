@@ -1,0 +1,22 @@
+{
+  "en": {
+    "leaveReview": "Leave a feedback",
+    "name": "Name",
+    "email": "Email",
+    "feedback": "Feedback",
+    "confirm": "Click to confirm that you consent to the processing of your personal data",
+    "reviews": "Feedbacks",
+    "consentIsRequired": "Consent is required",
+    "submitBtn": "Submit feedback"
+  },
+  "ru": {
+    "leaveReview": "Оставить отзыв",
+    "name": "Имя",
+    "email": "Email",
+    "feedback": "Отзыв",
+    "confirm": "Нажимите, чтобы подтвердить, что Вы даете согласие на обработку Ваших персональных данных",
+    "reviews": "Отзывы",
+    "consentIsRequired": "Согласие обязательно",
+    "submitBtn": "Отправить отзыв"
+  }
+}

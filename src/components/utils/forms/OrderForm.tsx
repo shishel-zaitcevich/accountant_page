@@ -2,6 +2,7 @@ import React from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { TextField, Grid, Typography } from '@mui/material';
 import { CustomButton } from '../CustomButton';
+import { useTranslation } from 'react-i18next';
 
 interface OrderFormProps {
   handleClose: () => void;
@@ -21,6 +22,8 @@ const OrderForm: React.FC<OrderFormProps> = ({ handleClose }) => {
     control,
     formState: { errors },
   } = useForm<FormData>();
+
+  const { t } = useTranslation();
 
   const onSubmit = (data: FormData) => {
     console.log(data);
@@ -43,7 +46,7 @@ const OrderForm: React.FC<OrderFormProps> = ({ handleClose }) => {
       <Grid container spacing={3}>
         <Grid item xs={12}>
           <Typography variant="h4" align="center" gutterBottom>
-            Форма заказа
+            {t('rates:orderForm')}
           </Typography>
         </Grid>
         <Grid item xs={12} sm={6}>
@@ -53,8 +56,8 @@ const OrderForm: React.FC<OrderFormProps> = ({ handleClose }) => {
             defaultValue=""
             render={({}) => (
               <TextField
-                label="Ваше имя"
-                {...register('name', { required: 'Это поле обязательно' })}
+                label={t('rates:name')}
+                {...register('name', { required: t('common:requires') })}
                 fullWidth
                 margin="normal"
                 error={!!errors.name}
@@ -70,9 +73,9 @@ const OrderForm: React.FC<OrderFormProps> = ({ handleClose }) => {
             defaultValue=""
             render={({}) => (
               <TextField
-                label="Наименование организации"
+                label={t('rates:nameOfOrganization')}
                 {...register('organization', {
-                  required: 'Это поле обязательно',
+                  required: t('common:requires'),
                 })}
                 fullWidth
                 margin="normal"
@@ -89,9 +92,9 @@ const OrderForm: React.FC<OrderFormProps> = ({ handleClose }) => {
             defaultValue=""
             render={({}) => (
               <TextField
-                label="Телефон"
+                label={t('rates:phone')}
                 {...register('phone', {
-                  required: 'Это поле обязательно',
+                  required: t('common:requires'),
                 })}
                 fullWidth
                 margin="normal"
@@ -108,9 +111,9 @@ const OrderForm: React.FC<OrderFormProps> = ({ handleClose }) => {
             defaultValue=""
             render={({}) => (
               <TextField
-                label="Электронная почта"
+                label={t('rates:email')}
                 {...register('email', {
-                  required: 'Это поле обязательно',
+                  required: t('common:requires'),
                 })}
                 fullWidth
                 margin="normal"
@@ -122,7 +125,7 @@ const OrderForm: React.FC<OrderFormProps> = ({ handleClose }) => {
         </Grid>
         <Grid item xs={12} style={{ textAlign: 'center', width: '100%' }}>
           <CustomButton type="submit" variant="contained" color="primary">
-            Отправить
+            {t('rates:submit')}
           </CustomButton>
         </Grid>
       </Grid>

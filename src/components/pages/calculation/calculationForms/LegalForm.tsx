@@ -8,14 +8,16 @@ import {
 import React from 'react';
 import { FormInputProps } from '../calculationTypes';
 import { Controller, useForm } from 'react-hook-form';
+import { useTranslation } from 'react-i18next';
 
 const LegalForm = ({ name, control }: FormInputProps) => {
   const {} = useForm();
+  const { t } = useTranslation();
 
   return (
     <FormControl>
       <Typography variant="h5" textAlign={'center'}>
-        Организационно-правовая форма
+        {t('calculation:legalForm')}
       </Typography>
       <Controller
         name={name}
@@ -27,8 +29,16 @@ const LegalForm = ({ name, control }: FormInputProps) => {
             value={field.value}
             onChange={(e) => field.onChange(e.target.value)}
           >
-            <FormControlLabel value="ИП" control={<Radio />} label="ИП" />
-            <FormControlLabel value="ООО" control={<Radio />} label="ООО" />
+            <FormControlLabel
+              value="ИП"
+              control={<Radio />}
+              label={t('calculation:entrepreneur')}
+            />
+            <FormControlLabel
+              value="ООО"
+              control={<Radio />}
+              label={t('calculation:llc')}
+            />
           </RadioGroup>
         )}
       />

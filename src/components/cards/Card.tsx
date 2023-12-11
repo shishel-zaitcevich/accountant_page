@@ -6,7 +6,6 @@ interface CardProps {
   title: string;
   quantity: string;
   price: number;
-  timeline: string;
   index: number;
   id: string;
   onClickHander: () => void;
@@ -16,7 +15,6 @@ export const Card: React.FC<CardProps> = ({
   title,
   quantity,
   price,
-  timeline,
   index,
 
   onClickHander,
@@ -30,14 +28,16 @@ export const Card: React.FC<CardProps> = ({
       <div className={`tarifs ${isEven ? 'even_tarif' : 'odd_tarif'}`}>
         <div className={`tarif ${isEven ? 'dark_tarif' : 'light_tarif'}`}>
           <h3 className={`price_titles ${isEven ? 'light_price-title' : ''}`}>
-            {title}
+            {t(`rates:rateTitleVal.${title}`)}
           </h3>
           <p
             className={`section_text text ${
               isEven ? 'light_section_text' : ''
             }`}
           >
+            {t('rates:headCount')}
             {quantity}
+            {t('rates:people')}
           </p>
           <span
             className={`price_size price_titles ${
@@ -51,7 +51,7 @@ export const Card: React.FC<CardProps> = ({
               isEven ? 'light_section_text' : ''
             }`}
           >
-            {timeline}
+            {t('rates:timeline')}
           </p>
 
           <button

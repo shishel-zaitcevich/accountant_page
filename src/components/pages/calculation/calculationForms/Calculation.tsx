@@ -10,8 +10,9 @@ import TaxTreatment from './TaxTreatment';
 import { CustomButton } from '../../../utils/CustomButton';
 import { CalculationType } from '../calculationTypes';
 import { TotalPrice } from '../logic/totalPrice';
-import './calculationStyles.scss';
 import ModalResult from '../../../utils/modalWindow/CalculationResultModal';
+import { useTranslation } from 'react-i18next';
+import './calculationStyles.scss';
 
 export function Calculation() {
   const {
@@ -27,6 +28,8 @@ export function Calculation() {
       accountantSystem: false,
     },
   });
+
+  const { t } = useTranslation();
 
   const [openModal, setOpenModal] = useState(false);
   const [totalPrice, setTotalPrice] = useState(0);
@@ -47,9 +50,7 @@ export function Calculation() {
       <div className="container">
         <Header />
         <div className="calculation_form">
-          <span className="calc_title">
-            Калькулятор расчета примерной стоимости обслуживания
-          </span>
+          <span className="calc_title">{t('calculation:calcTitle')}</span>
           <div className="choice">
             <div className="calc_slider">
               <CustomSlider name="quantity" control={control} />
@@ -67,7 +68,7 @@ export function Calculation() {
             sx={{ minWidth: '200px', maxWidth: '400px' }}
             onClick={onSubmit}
           >
-            Рассчитать примерную стоимость
+            {t('calculation:calc')}
           </CustomButton>
         </div>
         <Footer />

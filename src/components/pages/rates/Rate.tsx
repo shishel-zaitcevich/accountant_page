@@ -3,8 +3,10 @@ import { ModalWindowProps } from '../../utils/modalWindow/RatesModal';
 import { useEffect } from 'react';
 import '../rates/rateStyle.scss';
 import { useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 export const Rate: React.FC<ModalWindowProps> = ({ handleOpen }) => {
+  const { t } = useTranslation();
   const { state } = useLocation();
   useEffect(() => {
     const scrollToRef = (id: string) => {
@@ -41,11 +43,17 @@ export const Rate: React.FC<ModalWindowProps> = ({ handleOpen }) => {
               )}
             </div>
             <div className="rate_card">
-              <div className="advantages_title text">{item.title} </div>
-              <div>{item.quantity}</div>
+              <div className="advantages_title text">
+                {t(`rates:rateTitleVal.${item.title}`)}
+              </div>
               <div>
-                {'Цена '}
-                {item.price} {item.timeline}
+                {t('rates:headCount')}
+                {item.quantity}
+                {t('rates:people')}
+              </div>
+              <div>
+                {t('rates:priceWord')}
+                {item.price} {t('rates:timeline')}
               </div>
             </div>
           </div>
@@ -55,7 +63,7 @@ export const Rate: React.FC<ModalWindowProps> = ({ handleOpen }) => {
             className="button_order button_bottom"
             onClick={handleOpenClick}
           >
-            Заказать
+            {t('rates:btnOrder')}
           </button>
         </div>
       ))}
